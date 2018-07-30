@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  starttime: 2018-07-30 10:11:10
+  endtime: 2018-07-30 10:11:10
+  capacity: 1
+  importance: 
+  note: MyText
+  availability: false
+
+two:
+  name: MyString
+  starttime: 2018-07-30 10:11:10
+  endtime: 2018-07-30 10:11:10
+  capacity: 1
+  importance: 
+  note: MyText
+  availability: false
