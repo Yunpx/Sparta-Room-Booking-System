@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <%= stylesheet_link_tag "rooms" %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 
 <h1>Rooms</h1>
 <table class="rooms">
     <thead>
       <tr>
         <td class="roomsblock" data-num="0"></td>
-        <td class="roomsblock" data-num="1">Zelda</td>
-        <td class="roomsblock" data-num="2">Mario</td>
-        <td class="roomsblock" data-num="3">Pac-man</td>
-        <td class="roomsblock" data-num="4">Frogger</td>
-        <td class="roomsblock" data-num="5">Cortana</td>
-        <td class="roomsblock" data-num="6">Tetris</td>
-        <td class="roomsblock" data-num="7">Breakout</td>
+        <td class="roomsblock zeldaheading" data-num="1">Zelda</td>
+        <td class="roomsblock marioheading" data-num="2">Mario</td>
+        <td class="roomsblock pacmanheading" data-num="3">Pac-man</td>
+        <td class="roomsblock froggerheading" data-num="4">Frogger</td>
+        <td class="roomsblock cortanaheading" data-num="5">Cortana</td>
+        <td class="roomsblock tetrisheading" data-num="6">Tetris</td>
+        <td class="roomsblock breakoutheading" data-num="7">Breakout</td>
       </tr>
     </thead>
     <tbody>

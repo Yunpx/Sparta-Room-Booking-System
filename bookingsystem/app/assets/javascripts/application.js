@@ -11,12 +11,29 @@
 // about supported directives.
 //
 
-//= require moment
 //= require jquery3
 //= require jquery_ujs
 //= require_tree  .
-//= require fullcalendar
-//= require fullcalendar/locale-all
-$(function(){
-
+$(function() {
+  $(".zelda").click(function(){
+    $(this).addClass("zeldabg");
+  });
+  $(".mario").click(function(){
+    $(this).addClass("mariobg");
+  });
+  $(".breakout").click(function(){
+    $(this).addClass("breakoutbg");
+  });
+  $(".pacman").click(function(){
+    $(this).addClass("pacmanbg");
+  });
+  $(".frogger").click(function(){
+    $(this).addClass("froggerbg");
+  });
+  $(".tetris").click(function(){
+    $(this).addClass("tetrisbg");
+  });
+  $(".cortana").click(function(){
+    $(this).addClass("cortanabg");
+  });
 });

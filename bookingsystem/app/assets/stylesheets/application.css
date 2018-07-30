@@ -12,8 +12,3 @@
  *
  *= require_tree .
  *= require_self
- *= require fullcalendar
- */
-.h1{
-  color: red;
-}
