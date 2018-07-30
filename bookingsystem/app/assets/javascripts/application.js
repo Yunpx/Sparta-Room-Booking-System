@@ -14,3 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+
+// peter and sithanga need this, DO NOT DELETE
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require bootstrap/dropdown
+//= require turbolinks
