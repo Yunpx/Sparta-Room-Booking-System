@@ -7,7 +7,7 @@ class CreateRooms < ActiveRecord::Migration[5.2]
       t.integer :capacity
       t.integer :importance
       t.text :note
-      t.boolean :availability
+      t.boolean :availability    , default: false
 
       t.timestamps
     end

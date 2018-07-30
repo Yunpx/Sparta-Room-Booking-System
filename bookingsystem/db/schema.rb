@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_07_30_101415) do
     t.integer "capacity"
     t.integer "importance"
     t.text "note"
-    t.boolean "availability"
+    t.boolean "availability", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
