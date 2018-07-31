@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Room.create(room_name: "Zelda")
 Room.create(room_name: "Mario")
 Room.create(room_name: "Pac-Man")
@@ -13,9 +14,27 @@ Room.create(room_name: "Cortana")
 Room.create(room_name: "Tetris")
 Room.create(room_name: "Breakout")
 
-User.create(
-  name: "newAdmin",
-  email: "new@new.com",
-  password: "123456",
-  password_confirmation: "123456"
-)
+user = User.new
+user.name = 'Admin'
+user.email = 'admin@admin.com'
+user.password = '123456'
+user.admin = true
+user.save!
+
+user = User.new
+user.name = 'Trainer1'
+user.email = 'Trainer1@sparta.com'
+user.password = '123456'
+user.save!
+
+user = User.new
+user.name = 'Trainer2'
+user.email = 'Trainer2@sparta.com'
+user.password = '123456'
+user.save!
+
+user = User.new
+user.name = 'Trainer3'
+user.email = 'Trainer3@sparta.com'
+user.password = '123456'
+user.save!
