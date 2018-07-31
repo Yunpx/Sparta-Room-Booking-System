@@ -19,7 +19,13 @@
 
   <tbody>
     <% @bookings.each do |booking| %>
-        <td><%= booking.room.room_name %><%= booking.user_id %></td>
+        <% if booking.id % 7 == 0%>
+        <td><%=booking.id%></td>
+
+        <tr></tr>
+        <%else%>
+        <td><%=booking.id%><%= booking.user_id %></td>
+        <%end%>
     <% end %>
   </tbody>
 </table>
