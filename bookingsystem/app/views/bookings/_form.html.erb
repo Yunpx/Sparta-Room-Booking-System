@@ -23,7 +23,9 @@
 
   <div class="field">
   <%= form.label :Room_name %>
-    <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
+    <%= select_tag(:room_id,'<option value= "1">Mario</option>,<option value= "2">Tetris</option>,<option value= "3">Zelda</option>
+      ,<option value= "4">Pac-Man</option>,<option value= "5">Frogger</option>,<option value= "6">Cortana</option>
+      ,<option value= "7">Break-out Space</option>'.html_safe, {:prompt => "Select Room"}) %>
   </div>
 
   <div class="field">
@@ -33,7 +35,7 @@
 
   <div class="field">
     <%= form.label :Date %>
-    <%= form.date_select :date %>
+    <%= form.date_select :starttime %>
   </div>
 
   <div class="field">
@@ -48,17 +50,13 @@
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= select_tag(:room_id, '<option value= "1">Normal</option>,<option value= "2">Important</option>,<option value= "3">Urgent</option>'.html_safe, {prompt: "Select Importance"}) %>
+    <%= select_tag(:importance, '<option value= "1">Normal</option>,<option value= "2">Important</option>,<option value= "3">Urgent</option>'.html_safe, {:prompt => "Select Importance"}) %>
   </div>
 
   <div class="field">
     <%= form.label :Note %>
     <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
   </div>
-
-  <% if !user_signed_in? %>
-    <%= booking.user_id = 1 %>
-  <% end %>
 
   <div class="actions">
     <%= form.submit "Book Room" %>
