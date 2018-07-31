@@ -26,6 +26,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
+    @booking.user_id = current_user.id
+    @booking.save
+
     respond_to do |format|
       if @booking.save
         format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
@@ -69,6 +72,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:user_id, :room_id)
+      params.require(:booking).permit(:user_id, :room_id, :participants, :date, :starttime, :endtime, :importance, :note)
     end
 end

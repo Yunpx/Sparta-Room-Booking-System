@@ -179,15 +179,15 @@
   </thead>
 
   <tbody>
-    <% @rooms.each do |room| %>
+    <% @bookings.each do |booking| %>
       <tr>
-        <td><%= room.name %></td>
-        <td><%= room.starttime %></td>
-        <td><%= room.endtime %></td>
-        <td><%= room.capacity %></td>
-        <td><%= room.importance %></td>
-        <td><%= room.note %></td>
-        <td><%= room.availability %></td>
+        <td><%= booking.room_name %></td>
+        <td><%= booking.starttime %></td>
+        <td><%= booking.endtime %></td>
+        <td><%= booking.capacity %></td>
+        <td><%= booking.importance %></td>
+        <td><%= booking.note %></td>
+        <td><%= booking.availability %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>

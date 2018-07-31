@@ -13,4 +13,9 @@ Room.create(room_name: "Cortana")
 Room.create(room_name: "Tetris")
 Room.create(room_name: "Breakout")
 
-User.create(name: "newAdmin", email: "new@new.com", password: "123456")
+User.create(
+  name: "newAdmin",
+  email: "new@new.com",
+  password: "123456",
+  password_confirmation: "123456"
+)
