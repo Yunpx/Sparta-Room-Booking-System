@@ -14,6 +14,17 @@ Room.create(room_name: "Cortana")
 Room.create(room_name: "Tetris")
 Room.create(room_name: "Breakout")
 
+User.create(name: 'Guest', email: 'haristsp1@gmail.com',password: '1234543')
+
+Room.create(room_name: "Zelda")
+Room.create(room_name: "Mario")
+Room.create(room_name: "Pac-Man")
+Room.create(room_name: "Frogger")
+Room.create(room_name: "Cortana")
+Room.create(room_name: "Tetris")
+Room.create(room_name: "Breakout")
+
+
 user = User.new
 user.name = 'Admin'
 user.email = 'admin@admin.com'

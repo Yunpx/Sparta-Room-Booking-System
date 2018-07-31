@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
   # GET /rooms.json
   def index
     @rooms = Room.all
+    @bookings = Booking.all
   end
 
   # GET /rooms/1
@@ -69,6 +70,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name)
+      params.require(:room).permit(:room_name)
     end
 end
