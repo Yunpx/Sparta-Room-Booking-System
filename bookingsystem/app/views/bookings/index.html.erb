@@ -7,35 +7,19 @@
 <table>
   <thead>
     <tr>
-      <th>Booking ID</th>
-      <th>User</th>
-      <th>Room</th>
-      <th>Date</th>
-      <th>Start</th>
-      <th>End</th>
-      <th>Participants</th>
-      <th>Importance</th>
-      <th>Note</th>
-      <th colspan="3"></th>
+      <th>Zelda</th>
+      <th>Mario</th>
+      <th>Pac-Man</th>
+      <th>Frogger</th>
+      <th>Cortana</th>
+      <th>Tetris</th>
+      <th>Breakout</th>
     </tr>
   </thead>
 
   <tbody>
     <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.id %></td>
-        <td><%= booking.user_id %></td>
-        <td><%= booking.room.room_name %></td>
-        <td><%= booking.date %></td>
-        <td><%= booking.starttime %></td>
-        <td><%= booking.endtime %></td>
-        <td><%= booking.participants %></td>
-        <td><%= booking.importance %></td>
-        <td><%= booking.note %></td>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= booking.room.room_name %><%= booking.user_id %></td>
     <% end %>
   </tbody>
 </table>
