@@ -10,5 +10,25 @@
   <%= @booking.room_id %>
 </p>
 
+<p>
+  <strong>Room:</strong>
+  <%= @booking.status %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @booking.importance %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @booking.note %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @booking.endtime %>
+</p>
+
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>

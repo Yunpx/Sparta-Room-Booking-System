@@ -3,6 +3,25 @@
 <%= stylesheet_link_tag "rooms" %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+<div class="waitingList">
+  <% if current_user %>
+    <% @bookings.each do |booking| %>
+    <% if booking.status == 'Pending' %>
+    <ul>
+      <li>
+        <tr>
+          <td><% room.room_name %> </td>
+          <td><% booking.date %> </td>
+          <td><% booking.starttime %> </td>
+          <td><% booking.endtime %> </td>
+          <td><% booking.note %> </td>
+        </tr>
+      </li>
+    </ul>
+    <% end %>
+   <% end %>
+  <% end %>
+</div>
 
 <h1>Rooms</h1>
 <table class="rooms">
