@@ -12,54 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :First_Name %>
-    <%= form.text_field :name %>
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :Last_Name %>
-    <%= form.text_field :lname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Email %>
-    <%= form.text_field :email %>
-  </div>
-
-<div class="field">
-  <%= form.label :Room_name %>
-    <%= select_tag(:room_id,'<option value= "1">Mario</option>,<option value= "2">Tetris</option>,<option value= "3">Zelda</option>
-      ,<option value= "4">Pac-Man</option>,<option value= "5">Frogger</option>,<option value= "6">Cortana</option>
-      ,<option value= "7">Break-out Space</option>'.html_safe, {:prompt => "Select Room"}) %>
-</div>
-
-  <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :starttime %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Time %>
-    <%= form.time_select :starttime, {prompt: true, prompt: {hour: "Select Hour"}, :minute_step => 30, start_hour: 8, end_hour: 19 ,:ampm => true} %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Duration %>
-    <p><%= form.number_field :duration, :class => 'text_field', :step => 0.5, in: 0..8 %> Hours</p>
-  </div>
-
-  <div class="field">
-    <%= form.label :Importance %>
-    <%= select_tag(:room_id, '<option value= "1">Normal</option>,<option value= "2">Important</option>
-      ,<option value= "3">Urgent</option>'.html_safe, {:prompt => "Select Importance"}) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Note %>
-    <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
+    <%= form.label :room_id %>
+    <%= form.number_field :room_id %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Book Room" %>
+    <%= form.submit %>
   </div>
 <% end %>
