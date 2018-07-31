@@ -59,6 +59,12 @@
     <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
   </div>
 
+  <% if !user_signed_in? %>
+    <% booking.status = 'Pending' %>
+  <% else %>
+    <% booking.status = 'Booked' %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit "Book Room" %>
   </div>

@@ -7,5 +7,24 @@
         <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
       </p>
     </div>
+    <div class="waitingList">
+      <% if current_user %>
+        <% @bookings.each do |booking| %>
+        <% if booking.status == 'Pending' %>
+        <ul>
+          <li>
+            <tr>
+              <td><% room.room_name %> </td>
+              <td><% booking.date %> </td>
+              <td><% booking.starttime %> </td>
+              <td><% booking.endtime %> </td>
+              <td><% booking.note %> </td>
+            </tr>
+          </li>
+        </ul>
+        <% end %>
+       <% end %>
+      <% end %>
+    </div>
   </div>
 <% end %>
