@@ -29,6 +29,11 @@
   </div>
 
   <div class="field">
+    <p><%= form.label :Participants %>
+    <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+  </div>
+
+  <div class="field">
     <%= form.label :Date %>
     <%= form.date_select :starttime %>
   </div>
@@ -39,8 +44,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :Duration %>
-    <p><%= form.number_field :duration, :class => 'text_field', :step => 0.5, in: 0..8 %> Hours</p>
+    <p><%= form.label :Duration %>
+    <%= form.number_field :duration, :class => 'text_field', :step => 0.5, in: 0..8 %> Hours</p>
   </div>
 
   <div class="field">
