@@ -1,0 +1,66 @@
+<%= form_with(model: booking, local: true) do |form| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <%= form.label :Name %>
+      <!-- Default value of textbox is User 1 if not logged in -->
+      <!-- Otherwise if logged in the textbox will display only the user logged in -->
+      <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Email %>
+      <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
+    </div>
+
+    <div class="field">
+    <%= form.label :Room_name %>
+      <%= collection_select(:booking, :room_id, Room.all, :id, :room_name, {:prompt => "Select Room"}) %>
+    </div>
+
+    <div class="field">
+      <p><%= form.label :Participants %>
+      <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+    </div>
+
+    <div class="field">
+      <%= form.label :Date %>
+      <%= form.date_select :date, prompt: {day: 'Day', month: 'Month', start_year: 2018} %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Time %>
+      <%= form.time_select :starttime, {prompt: true, prompt: {hour: "Select Hour"}, :minute_step => 60, start_hour: 8, end_hour: 19 ,:ampm => true} %>
+    </div>
+
+    <div class="field">
+      <p><%= form.label :Duration %>
+        <!-- endtime.text = starttime.text + Duration.text -->
+      <%= form.number_field :endtime, :class => 'text_field', :step => 0.5, in: 0..8 %> Hours</p>
+    </div>
+
+    <div class="field">
+      <%= form.label :Importance %>
+      <%= select_tag(:importance, '<option value= "1">Normal</option>,<option value= "2">Important</option>
+        ,<option value= "3">Urgent</option>'.html_safe, {:prompt => "Select Importance"}) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Note %>
+      <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit "Book Room" %>
+  </div>
+<% end %>
