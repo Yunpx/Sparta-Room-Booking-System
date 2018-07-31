@@ -13,19 +13,17 @@
 
   <div class="field">
     <%= form.label :Name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
   </div>
 
   <div class="field">
     <%= form.label :Email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
   </div>
 
   <div class="field">
   <%= form.label :Room_name %>
-    <%= select_tag(:room_id,'<option value= "1">Mario</option>,<option value= "2">Tetris</option>,<option value= "3">Zelda</option>
-      ,<option value= "4">Pac-Man</option>,<option value= "5">Frogger</option>,<option value= "6">Cortana</option>
-      ,<option value= "7">Break-out Space</option>'.html_safe, {:prompt => "Select Room"}) %>
+    <%= collection_select(:booking, :room_id, Room.all, :id, :room_name, {:prompt => "Select Room"}) %>
   </div>
 
   <div class="field">
@@ -35,7 +33,7 @@
 
   <div class="field">
     <%= form.label :Date %>
-    <%= form.date_select :starttime %>
+    <%= form.date_select :date, prompt: {day: 'Day', month: 'Month', year: 'Year'} %>
   </div>
 
   <div class="field">
@@ -50,7 +48,7 @@
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= select_tag(:room_id, '<option value= "1">Normal</option>,<option value= "2">Important</option>
+    <%= select_tag(:importance, '<option value= "1">Normal</option>,<option value= "2">Important</option>
       ,<option value= "3">Urgent</option>'.html_safe, {:prompt => "Select Importance"}) %>
   </div>
 
