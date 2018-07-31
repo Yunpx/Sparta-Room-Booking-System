@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
   # GET /bookings/1
   # GET /bookings/1.json
   def show
+    @bookings = Booking.find(params[:id])
   end
 
   # GET /bookings/new
@@ -80,6 +81,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:user_id, :room_id, :participants, :date, :starttime, :endtime, :importance, :note, :status)
+      params.require(:booking).permit(:user_id, :room_id, :room_name, :participants, :email, :date, :starttime, :endtime, :importance, :note, :status)
     end
 end
