@@ -20,8 +20,14 @@
     <%= form.label :room_id %>
     <%= form.number_field :room_id %>
   </div>
+  <!---- Checks if a user is admin, then lets them change the status from pending to booked ---->
+  <% if current_user.isAdmin %>
+    <%= form.label :room_status %>
+    <%= form.text_field :room_status %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
