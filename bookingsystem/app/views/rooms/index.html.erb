@@ -3,6 +3,25 @@
 <%= stylesheet_link_tag "rooms" %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+<div class="waitingList">
+  <% if current_user %>
+    <% @bookings.each do |booking| %>
+    <% if booking.status == 'Pending' %>
+    <ul>
+      <li>
+        <tr>
+          <td><% room.room_name %> </td>
+          <td><% booking.date %> </td>
+          <td><% booking.starttime %> </td>
+          <td><% booking.endtime %> </td>
+          <td><% booking.note %> </td>
+        </tr>
+      </li>
+    </ul>
+    <% end %>
+   <% end %>
+  <% end %>
+</div>
 
 <h1>Rooms</h1>
 <table class="rooms">
@@ -168,12 +187,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Starttime</th>
-      <th>Endtime</th>
-      <th>Capacity</th>
-      <th>Importance</th>
-      <th>Note</th>
-      <th>Availability</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -181,13 +194,7 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.name %></td>
-        <td><%= room.starttime %></td>
-        <td><%= room.endtime %></td>
-        <td><%= room.capacity %></td>
-        <td><%= room.importance %></td>
-        <td><%= room.note %></td>
-        <td><%= room.availability %></td>
+        <td><%= room.room_name %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
