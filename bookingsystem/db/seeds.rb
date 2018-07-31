@@ -13,3 +13,10 @@ Room.create(room_name: "Frogger")
 Room.create(room_name: "Cortana")
 Room.create(room_name: "Tetris")
 Room.create(room_name: "Breakout Space")
+
+User.create(
+  name: "newAdmin",
+  email: "new@new.com",
+  password:  "123456",
+  password_confirmation: "123456"
+)

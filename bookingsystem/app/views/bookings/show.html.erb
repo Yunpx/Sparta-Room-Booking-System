@@ -1,14 +1,47 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>User:</strong>
   <%= @booking.user_id %>
 </p>
 
 <p>
-  <strong>Room:</strong>
-  <%= @booking.room_id %>
+  <strong>Email:</strong>
+  <%= @booking.email %>
 </p>
+
+<p>
+  <strong>Room Name:</strong>
+  <%= @booking.room.room_name %>
+</p>
+
+<p>
+  <strong>Participants:</strong>
+  <%= @booking.participants %>
+</p>
+
+<p>
+  <strong>Date/Time:</strong>
+  <%= @booking.date %>
+  <%= @booking.starttime%>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @booking.endtime %>
+</p>
+
+<p>
+  <strong>Importance:</strong>
+  <%= @booking.importance %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @booking.note %>
+</p>
+
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>
