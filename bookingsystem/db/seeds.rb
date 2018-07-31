@@ -8,6 +8,7 @@
 
 
 User.create(name: 'Guest', email: 'haristsp1@gmail.com',password: '1234543')
+
 Room.create(room_name: "Zelda")
 Room.create(room_name: "Mario")
 Room.create(room_name: "Pac-Man")
