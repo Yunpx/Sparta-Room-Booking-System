@@ -191,22 +191,7 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.room_name %></td>
-        <td><%= booking.starttime %></td>
-        <td><%= booking.endtime %></td>
-        <td><%= booking.capacity %></td>
-        <td><%= booking.importance %></td>
-        <td><%= booking.note %></td>
-        <td><%= booking.availability %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+
 </table>
 
 <br>

@@ -1,10 +1,13 @@
+<%= stylesheet_link_tag "bookings" %>
 <p id="notice"><%= notice %></p>
+
 
 <h1>Bookings</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Booking ID</th>
       <th>User</th>
       <th>Room</th>
       <th>Date</th>
@@ -20,6 +23,7 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
+        <td><%= booking.id %></td>
         <td><%= booking.user_id %></td>
         <td><%= booking.room.room_name %></td>
         <td><%= booking.date %></td>
