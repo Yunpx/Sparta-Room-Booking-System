@@ -1,3 +1,43 @@
 // Place all the styles related to the bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+td {
+  border: solid 1px black;
+  width: 150px;
+  height: 80px;
+  text-align: center;
+}
+
+th {
+  width:200px;
+  height:80px;
+  border: solid 1px black;
+  text-align: center;
+}
+.mariobg{
+  background-color: #ff4444;
+}
+
+.pacmanbg{
+  background-color: #ffff66;
+}
+
+.froggerbg{
+  background-color: #66ff66;
+}
+
+.cortanabg{
+  background-color: #ff66ff;
+}
+
+.zeldabg{
+  background-color: #ffcccc;
+}
+
+.tetrisbg {
+  background-color: #cce6ff;
+}
+
+.breakoutbg{
+  background-color: #ffcc80;
+}

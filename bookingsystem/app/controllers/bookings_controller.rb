@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.order("id DESC")
   end
 
   # GET /bookings/1
@@ -27,16 +27,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if !user_signed_in?
-      @booking.status = "Pending"
-      @booking.user_id = 1
-      @booking.save
-    else
-      @booking.status = 'Booked'
-      @booking.user_id = current_user.id
-      @booking.save
-    end
-
+    @booking.user_id = current_user.id
+    @booking.save
 
     respond_to do |format|
       if @booking.save
@@ -81,6 +73,8 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:user_id, :room_id, :room_name, :participants, :email, :date, :starttime, :endtime, :importance, :note, :status)
+
+      params.require(:booking).permit(:user_id, :name, :room_id, :participants, :email, :date, :starttime, :endtime, :importance, :note, :status)
+
     end
 end
