@@ -41,15 +41,43 @@
         <% if booking.id % 7 == 0%>
           <% if booking.note %>
             <tr></tr>
-            <td class="booked"><%= 'booked' %></td>
+            <% if booking.room.room_name == "Mario" %>
+              <td class="mariobg"><%= 'booked' %></td>
+              <% elsif booking.room.room_name == "Zelda"%>
+                <td class="zeldabg"><%= 'booked' %></td>
+              <% elsif booking.room.room_name == "Pac-man"  %>
+                <td class="pacmanbg"><%= 'booked' %></td>
+              <% elsif  booking.room.room_name == "Frogger" %>
+                <td class="froggerbg"><%= 'booked' %></td>
+              <% elsif booking.room.room_name == "Cortana" %>
+                <td class="cortanabg"><%= 'booked' %></td>
+              <% elsif booking.room.room_name == "Tetris" %>
+                <td class="tetrisbg"><%= 'booked' %></td>
+              <% elsif booking.room.room_name == "Breakout" %>
+                <td class="break"><%= 'booked' %></td>
+              <% end %>
           <% else %>
               <tr></tr>
               <td><%= link_to 'book', edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
-            <td class="booked"><%= 'booked' %></td>
-          <% else %>
+          <% if booking.room.room_name == "Mario" %>
+            <td class="mariobg"><%= 'booked' %></td>
+            <% elsif booking.room.room_name == "Zelda"%>
+              <td class="zeldabg"><%= 'booked' %></td>
+            <% elsif booking.room.room_name == "Pac-man"  %>
+              <td class="pacmanbg"><%= 'booked' %></td>
+            <% elsif  booking.room.room_name == "Frogger" %>
+              <td class="froggerbg"><%= 'booked' %></td>
+            <% elsif booking.room.room_name == "Cortana" %>
+              <td class="cortanabg"><%= 'booked' %></td>
+            <% elsif booking.room.room_name == "Tetris" %>
+              <td class="tetrisbg"><%= 'booked' %></td>
+            <% elsif booking.room.room_name == "Breakout" %>
+              <td class="break"><%= 'booked' %></td>
+            <% end %>
+                      <% else %>
             <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
           <% end %>
         <%end%>
