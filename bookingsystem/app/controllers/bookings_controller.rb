@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all.order("id DESC")
-
   end
 
   # GET /bookings/1
