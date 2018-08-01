@@ -46,371 +46,462 @@ user.save!
 Booking.create([
   {
     room_id: 7,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 8
+    starttime: 8,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 8
-  },
+    starttime: 8,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 9
+    starttime: 9,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 9
-  },
+    starttime: 9,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 10
+    starttime: 10,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 10
-  },
+    starttime: 10,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 11
+    starttime: 11,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 11
-  },
+    starttime: 11,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 12
+    starttime: 12,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 12
-  },
+    starttime: 12,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 13
+    starttime: 13,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 13
-  },
+    starttime: 13,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 14
+    starttime: 14,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 14
-  },
+    starttime: 14,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 15
+    starttime: 15,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 15
-  },
+    starttime: 15,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 16
+    starttime: 16,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 16
-  },
+    starttime: 16,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 17
+    starttime: 17,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 17
-  },
+    starttime: 17,
+    status: "AVAILABLE"
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 6,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 5,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 4,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 3,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 2,
-    starttime: 18
+    starttime: 18,
+    status: "AVAILABLE"
+
   },
   {
     room_id: 1,
-    starttime: 18
-  },
+    starttime: 18,
+    status: "AVAILABLE"
+
+  }
   ])
 
 Booking.create([
   {
     room_id: 7,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 6,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 5,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 4,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 3,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 2,
-    starttime: 19
+    starttime: 19,
+    status: "AVAILABLE"
   },
   {
     room_id: 1,
-    starttime: 19
-  },
+    starttime: 19,
+    status: "AVAILABLE"
+  }
   ])
