@@ -23,3 +23,27 @@
 //= require jquery_ujs
 //= require bootstrap/dropdown
 //= require turbolinks
+
+$(function() {
+  $(".zelda").click(function(){
+    $(this).addClass("zeldabg");
+  });
+  $(".mario").click(function(){
+    $(this).addClass("mariobg");
+  });
+  $(".breakout").click(function(){
+    $(this).addClass("breakoutbg");
+  });
+  $(".pacman").click(function(){
+    $(this).addClass("pacmanbg");
+  });
+  $(".frogger").click(function(){
+    $(this).addClass("froggerbg");
+  });
+  $(".tetris").click(function(){
+    $(this).addClass("tetrisbg");
+  });
+  $(".cortana").click(function(){
+    $(this).addClass("cortanabg");
+  });
+});

@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +18,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to 'Devise Demo', root_path, class: 'navbar-brand' %>
+          <%= link_to 'Sparta Room Booking System', root_path, class: 'navbar-brand' %>
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
@@ -31,6 +32,9 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
+                  <% if current_user.admin == true %>
+                    <li><%= link_to 'Admin Panel', "http://localhost:3000/admin" %></li>
+                  <% end %>
                   <li><%= link_to 'Profile', edit_user_registration_path %></li>
                   <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
                 </ul>
