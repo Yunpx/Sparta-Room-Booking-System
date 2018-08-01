@@ -25,7 +25,7 @@
 
   <div class="field">
     <%= form.label :Room_name %>
-    <%= collection_select(:booking, :room_id, Room.all, :id, :room_name, {:prompt => "Select Room"}) %>
+    <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
   </div>
 
     <div class="field">
@@ -40,24 +40,22 @@
 
   <div class="field">
     <%= form.label :Start %>
-    <%= form.time_select :starttime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 60, start_hour: 8, end_hour: 19} %>
+    <%= form.time_select :starttime, {:minute_step => 60, start_hour: 8, end_hour: 19} %>
   </div>
 
   <div class="field">
     <p><%= form.label :End %>
-    <%= form.time_select :endtime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 60, start_hour: 8, end_hour: 19} %>
+    <%= form.time_select :endtime, {:minute_step => 60, start_hour: 8, end_hour: 19} %>
   </div>
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= select_tag :importance, (options_for_select([['Normal'], ['Important'], ['Urgent']])), {:prompt => "Please Select"} %>
-
+    <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'], ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
   </div>
 
   <div class="field">
     <%= form.label :Category %>
-    <%= select_tag :category, (options_for_select([['Client Visit'], ['Team Huddle'], ['Client Interview'], ['Team Meeting'], ['Executive Meeting']])), {:prompt => "Please Select"}%>
-
+    <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'], ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
   </div>
 
     <div class="field">
