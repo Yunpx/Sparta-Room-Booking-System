@@ -43,10 +43,12 @@ user.email = 'Trainer3@sparta.com'
 user.password = '123456'
 user.save!
 
+
+loop
 Booking.create([
   {
     room_id: 7,
-    starttime: 8
+    starttime: 8,
   },
   {
     room_id: 6,
