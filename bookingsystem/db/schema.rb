@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2018_08_01_154502) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "name"
-    t.integer "importance"
+    t.string "importance"
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(version: 2018_08_01_154502) do
     t.integer "participants"
     t.integer "room_id"
     t.integer "user_id"
-    t.integer "status"
+    t.string "status"
     t.string "email"
+    
     t.integer "day_id"
+
+    t.string "category"
   end
 
   create_table "rooms", force: :cascade do |t|

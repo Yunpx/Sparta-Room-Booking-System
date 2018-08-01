@@ -44,7 +44,7 @@ user.password = '123456'
 user.save!
 
 
-loop
+
 Booking.create([
   {
     room_id: 7,
