@@ -71,7 +71,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 8
-  },
+  }
   ])
 
 Booking.create([
@@ -102,7 +102,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 9
-  },
+  }
   ])
 
 Booking.create([
@@ -133,7 +133,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 10
-  },
+  }
   ])
 
 Booking.create([
@@ -164,7 +164,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 11
-  },
+  }
   ])
 
 Booking.create([
@@ -195,7 +195,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 12
-  },
+  }
   ])
 
 Booking.create([
@@ -226,7 +226,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 13
-  },
+  }
   ])
 
 Booking.create([
@@ -257,7 +257,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 14
-  },
+  }
   ])
 
 Booking.create([
@@ -288,7 +288,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 15
-  },
+  }
   ])
 
 Booking.create([
@@ -319,7 +319,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 16
-  },
+  }
   ])
 
 Booking.create([
@@ -350,7 +350,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 17
-  },
+  }
   ])
 
 Booking.create([
@@ -381,7 +381,7 @@ Booking.create([
   {
     room_id: 1,
     starttime: 18
-  },
+  }
   ])
 
 Booking.create([
@@ -412,5 +412,5 @@ Booking.create([
   {
     room_id: 1,
     starttime: 19
-  },
+  }
   ])

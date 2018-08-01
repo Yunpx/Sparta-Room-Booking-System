@@ -42,45 +42,46 @@
           <% if booking.note %>
             <tr></tr>
             <% if booking.room.room_name == "Mario" %>
-              <td class="mariobg"><%= 'booked' %></td>
+              <td class="mariobg"><%= link_to booking.inspect, edit_booking_path(booking) %></td>
               <% elsif booking.room.room_name == "Zelda"%>
-                <td class="zeldabg"><%= 'booked' %></td>
+                <td class="zeldabg"><%= link_to booking.inspect, edit_booking_path(booking) %></td>
               <% elsif booking.room.room_name == "Pac-Man"  %>
-                <td class="pacmanbg"><%= 'booked' %></td>
+                <td class="pacmanbg"><%= booking.starttime %></td>
               <% elsif  booking.room.room_name == "Frogger" %>
-                <td class="froggerbg"><%= 'booked' %></td>
+                <td class="froggerbg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Cortana" %>
-                <td class="cortanabg"><%= 'booked' %></td>
+                <td class="cortanabg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Tetris" %>
-                <td class="tetrisbg"><%= 'booked' %></td>
+                <td class="tetrisbg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Breakout" %>
-                <td class="breakoutbg"><%= 'booked' %></td>
+                <td class="breakoutbg"><%= booking.starttime %></td>
               <% end %>
           <% else %>
               <tr></tr>
-              <td><%= link_to 'book', edit_booking_path(booking) %></td>
+              <td><%= link_to booking.inspect, edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
             <% if booking.room.room_name == "Mario" %>
-              <td class="mariobg"><%= 'booked' %></td>
+              <td class="mariobg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Zelda"%>
-                <td class="zeldabg"><%= 'booked' %></td>
+                <td class="zeldabg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Pac-Man"  %>
-                <td class="pacmanbg"><%= 'booked' %></td>
+                <td class="pacmanbg"><%= booking.starttime %></td>
               <% elsif  booking.room.room_name == "Frogger" %>
-                <td class="froggerbg"><%= 'booked' %></td>
+                <td class="froggerbg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Cortana" %>
-                <td class="cortanabg"><%= 'booked' %></td>
+                <td class="cortanabg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Tetris" %>
-                <td class="tetrisbg"><%= 'booked' %></td>
+                <td class="tetrisbg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Breakout" %>
-                <td class="breakoutbg"><%= 'booked' %></td>
+                <td class="breakoutbg"><%= booking.starttime %></td>
               <% end %>
             <% else %>
               <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
           <% end %>
         <%end%>
+
     <% end %>
   </tbody>
 </table>

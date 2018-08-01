@@ -50,13 +50,13 @@
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= select_tag :importance, (options_for_select([['Normal'], ['Important'], ['Urgent']])), {:prompt => "Please Select"} %>
-
+       <%= form.select(:importance, options_for_select([['Normal', '!'],['Important', '!!'],['Urgent','!!!']])) %>
   </div>
 
   <div class="field">
     <%= form.label :Category %>
-    <%= select_tag :category, (options_for_select([['Client Visit'], ['Team Huddle'], ['Client Interview'], ['Team Meeting'], ['Executive Meeting']])), {:prompt => "Please Select"}%>
+    <%= form.select(:category, options_for_select([['Client Visit', 'Client Visit'],['Team Huddle', 'Team Huddle'],['Client Interview','Client Interview'], ['Team Meeting','Team Meeting'],['Executive Meeting','Executive Meeting']])) %>
+
 
   </div>
 
