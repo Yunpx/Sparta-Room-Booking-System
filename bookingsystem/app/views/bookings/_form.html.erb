@@ -40,22 +40,28 @@
 
   <div class="field">
     <%= form.label :Start %>
-    <%= form.time_select :starttime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 15, start_hour: 8, end_hour: 19, :ampm => true} %>
+    <%= form.time_select :starttime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 60, start_hour: 8, end_hour: 19} %>
   </div>
 
   <div class="field">
     <p><%= form.label :End %>
-    <%= form.time_select :endtime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 15, start_hour: 8, end_hour: 19, :ampm => true} %>
+    <%= form.time_select :endtime, {prompt: true, prompt: {hour: "Select Time"}, :minute_step => 60, start_hour: 8, end_hour: 19} %>
   </div>
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= select_tag :importance, (options_for_select([['Normal', 1], ['Important', 2], ['Urgent', 3]]))%>
+    <%= select_tag :importance, (options_for_select([['Normal'], ['Important'], ['Urgent']])), {:prompt => "Please Select"} %>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :Category %>
+    <%= select_tag :category, (options_for_select([['Client Visit'], ['Team Huddle'], ['Client Interview'], ['Team Meeting'], ['Executive Meeting']])), {:prompt => "Please Select"}%>
 
   </div>
 
     <div class="field">
-      <%= form.label :Note %>
+      <%= form.label :Additional_Note %>
       <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
     </div>
 
