@@ -45,7 +45,7 @@
               <td class="mariobg"><%= 'booked' %></td>
               <% elsif booking.room.room_name == "Zelda"%>
                 <td class="zeldabg"><%= 'booked' %></td>
-              <% elsif booking.room.room_name == "Pac-man"  %>
+              <% elsif booking.room.room_name == "Pac-Man"  %>
                 <td class="pacmanbg"><%= 'booked' %></td>
               <% elsif  booking.room.room_name == "Frogger" %>
                 <td class="froggerbg"><%= 'booked' %></td>
@@ -54,7 +54,7 @@
               <% elsif booking.room.room_name == "Tetris" %>
                 <td class="tetrisbg"><%= 'booked' %></td>
               <% elsif booking.room.room_name == "Breakout" %>
-                <td class="break"><%= 'booked' %></td>
+                <td class="breakoutbg"><%= 'booked' %></td>
               <% end %>
           <% else %>
               <tr></tr>
@@ -66,7 +66,7 @@
             <td class="mariobg"><%= 'booked' %></td>
             <% elsif booking.room.room_name == "Zelda"%>
               <td class="zeldabg"><%= 'booked' %></td>
-            <% elsif booking.room.room_name == "Pac-man"  %>
+            <% elsif booking.room.room_name == "Pac-Man"  %>
               <td class="pacmanbg"><%= 'booked' %></td>
             <% elsif  booking.room.room_name == "Frogger" %>
               <td class="froggerbg"><%= 'booked' %></td>
@@ -75,7 +75,7 @@
             <% elsif booking.room.room_name == "Tetris" %>
               <td class="tetrisbg"><%= 'booked' %></td>
             <% elsif booking.room.room_name == "Breakout" %>
-              <td class="break"><%= 'booked' %></td>
+              <td class="breakoutbg"><%= 'booked' %></td>
             <% end %>
                       <% else %>
             <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
