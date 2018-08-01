@@ -20,8 +20,9 @@
   <tbody>
     <% @bookings.each do |booking| %>
         <% if booking.id % 7 == 0%>
+              <tr></tr>
           <td><%= link_to booking.id, edit_booking_path(booking) %></td>
-        <tr></tr>
+
         <%else%>
           <td><%= link_to booking.id, edit_booking_path(booking) %><%= booking.user_id %></td>
         <%end%>
