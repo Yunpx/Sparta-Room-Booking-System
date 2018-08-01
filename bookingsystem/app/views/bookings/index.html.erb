@@ -1,25 +1,31 @@
+<%= stylesheet_link_tag "bookings" %>
 <p id="notice"><%= notice %></p>
+
 
 <h1>Bookings</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Room</th>
-      <th colspan="3"></th>
+      <th>Zelda</th>
+      <th>Mario</th>
+      <th>Pac-Man</th>
+      <th>Frogger</th>
+      <th>Cortana</th>
+      <th>Tetris</th>
+      <th>Breakout</th>
     </tr>
   </thead>
 
   <tbody>
     <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.user_id %></td>
-        <td><%= booking.room_id %></td>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <% if booking.id % 7 == 0%>
+              <tr></tr>
+          <td><%= link_to booking.id, edit_booking_path(booking) %></td>
+
+        <%else%>
+          <td><%= link_to booking.id, edit_booking_path(booking) %><%= booking.user_id %></td>
+        <%end%>
     <% end %>
   </tbody>
 </table>
