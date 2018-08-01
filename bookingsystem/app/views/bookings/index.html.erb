@@ -89,9 +89,11 @@
 <div class="waiting">
   <table>
     <th>Waitinglist</th>
-    <tr>
-      <td></td>
-    </tr>
+    <% @bookings.each do |booking| %>
+    <%if booking.status == "PENDING"%>
+      <tr><td><%=booking.id%></td></tr>
+      <%end%>
+    <%end%>
   </table>
 
 </div>
