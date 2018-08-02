@@ -12,7 +12,7 @@ class DaysController < ApplicationController
   def show
 
     @days = Day.find(params[:id])
-
+    @bookings = @days.bookings.all.order("id DESC")
   end
 
   # GET /days/new

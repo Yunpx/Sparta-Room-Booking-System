@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all.order("id DESC")
+    @bookings = Booking.all.order("id ASC")
     @rooms = Room.all.order("id ")
 
   end
@@ -70,6 +70,8 @@ class BookingsController < ApplicationController
         format.json { render json: @booking.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # DELETE /bookings/1

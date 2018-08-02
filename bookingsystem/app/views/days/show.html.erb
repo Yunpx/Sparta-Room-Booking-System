@@ -43,22 +43,24 @@
   </thead>
 
   <tbody>
-    <% @days.bookings.each do |booking| %>
+    <% @bookings.each do |booking| %>
     <% if booking.id % 7 == 0%>
       <% if booking.note %>
-      <td class= <%= booking.room.room_name %>><%= link_to booking.id, edit_booking_path(booking) %></td>
       <tr></tr>
 
+      <td class= <%= booking.room.room_name %>><%= link_to "booked", edit_booking_path(booking) %></td>
+
       <% else %>
-          <td><%= link_to booking.id, edit_booking_path(booking) %></td>
-          <tr></tr>
+      <tr></tr>
+
+          <td><%=link_to  "edit", edit_booking_path(booking) %></td>
 
       <% end %>
     <%else%>
       <% if booking.note %>
-        <td class= <%= booking.room.room_name %>><%= link_to booking.id, edit_booking_path(booking) %></td>
+        <td class= <%= booking.room.room_name %>><%= link_to "booked", edit_booking_path(booking) %></td>
         <% else %>
-          <td><%= link_to booking.id, edit_booking_path(booking) %><%= booking.user_id %></td>
+          <td><%= link_to "edit", edit_booking_path(booking) %></td>
       <% end %>
     <%end%>
     <% end %>
