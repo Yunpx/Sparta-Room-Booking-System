@@ -111,6 +111,12 @@ a:hover {
   font-family: 'Modern Antiqua', cursive;
 }
 
+.edit_heading {
+  position: relative;
+  font-family: 'Modern Antiqua', cursive;
+  left: 430px;
+}
+
 a:link {
     text-decoration: none;
     font-weight: bold;
@@ -119,4 +125,48 @@ a:link {
 a:visited {
     text-decoration: none;
     font-weight: bold;
+}
+
+.form_box {
+  position: relative;
+  border: 2px solid black;
+  width: 350px;
+  height: 400px;
+  left: 375px;
+  background-color: white;
+  text-align: center;
+  top: 35px;
+  padding: 25px;
+  border-radius: 5%;
+}
+
+.show_box {
+  position: relative;
+  border: 2px solid black;
+  width: 350px;
+  height: 400px;
+  left: 375px;
+  background-color: white;
+  text-align: center;
+  top: 35px;
+  padding: 25px;
+  border-radius: 5%;
+}
+
+.back_button {
+  position: relative;
+  left: 530px;
+  top: 60px;
+}
+
+.calendar {
+  margin-top: 35px;
+  border: 2px solid black;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  left: -200px;
 }
