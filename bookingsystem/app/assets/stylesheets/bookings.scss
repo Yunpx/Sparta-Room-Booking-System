@@ -6,6 +6,7 @@ td {
   width: 150px;
   height: 80px;
   text-align: center;
+  font-family: "Comfortaa", cursive;
 }
 
 th {
@@ -13,31 +14,214 @@ th {
   height:80px;
   border: solid 1px black;
   text-align: center;
-}
-.mariobg{
-  background-color: #ff4444;
+  font-family: "Comfortaa", cursive;
 }
 
-.pacmanbg{
+.mariobg, .mariobg a{
+  background-color: #ff6666;
+  color: black;
+  font-weight: bold;
+}
+
+.pacmanbg, .pacmanbg a{
   background-color: #ffff66;
+  color: black;
+  font-weight: bold;
 }
 
-.froggerbg{
+.froggerbg, .froggerbg a{
   background-color: #66ff66;
+  color: black;
+  font-weight: bold;
 }
 
-.cortanabg{
+.cortanabg, .cortanabg a{
   background-color: #ff66ff;
+  color: black;
+  font-weight: bold;
 }
 
-.zeldabg{
+.zeldabg, .zeldabg a{
   background-color: #ffcccc;
+  color: black;
+  font-weight: bold;
 }
 
-.tetrisbg {
+.tetrisbg, .tetrisbg a{
   background-color: #cce6ff;
+  color: black;
+  font-weight: bold;
 }
 
-.breakoutbg{
+.breakoutbg, .breakoutbg a{
   background-color: #ffcc80;
+  color: black;
+  font-weight: bold;
+}
+
+.marioheading{
+  background-color: #ff1a1a;
+  font-size: 1.6em;
+}
+
+.pacmanheading{
+  background-color: #ffff00;
+  font-size: 1.6em;
+}
+
+.froggerheading{
+  background-color: #00ff00;
+  font-size: 1.6em;
+}
+
+.cortanaheading{
+  background-color: #ff00ff;
+  font-size: 1.6em;
+}
+
+.zeldaheading{
+  background-color: #ff6699;
+  font-size: 1.6em;
+}
+
+.tetrisheading {
+  background-color: #80ffff;
+  font-size: 1.6em;
+}
+
+.breakoutheading{
+  background-color: #ffa31a;
+  font-size: 1.6em;
+}
+
+.timeslot_heading {
+  width: 80px;
+  font-size: 1.5em;
+}
+
+.timeslot {
+  width: 50px;
+  font-size: 1.2em;
+}
+
+.booking_field:hover {
+    background-color: lightgrey;
+}
+
+a:hover {
+  font-size: 1.1em;
+}
+
+.heading {
+  font-family: "Comfortaa", cursive;
+}
+
+.edit_heading {
+  position: relative;
+  font-family: "Comfortaa", cursive;
+  left: 430px;
+}
+
+.booking_field a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.booking_field a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.form_box {
+  position: relative;
+  border: 1px solid black;
+  width: 350px;
+  left: 375px;
+  background-color: white;
+  text-align: left;
+  top: 35px;
+  padding: 15px;
+  border-radius: 2%;
+  line-height: 26px;
+}
+
+.show_box {
+  position: relative;
+  border: 2px solid black;
+  width: 350px;
+  height: 400px;
+  left: 375px;
+  background-color: white;
+  text-align: left;
+  top: 35px;
+  padding: 45px;
+  border-radius: 2%;
+}
+
+.back_button {
+  position: relative;
+  left: 530px;
+  top: 60px;
+}
+
+.calendar {
+  margin-top: 35px;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  left: -200px;
+}
+
+.importancefield {
+  padding-right: 40px;
+}
+.categoryfield {
+  padding-right: 55px;
+}
+
+#booking_category {
+  width: 57%;
+}
+
+#booking_date_2i {
+    width: 23%;
+}
+
+#booking_importance {
+  width: 57%;
+}
+
+#booking_note {
+  width: 100%;
+}
+.namefield {
+  padding-right: 83px;
+}
+
+.roomfield {
+  padding-right: 38px;
+}
+
+.participantsfield{
+  padding-right: 38px;
+}
+
+.datefield{
+  padding-right: 87px;
+}
+
+.startfield{
+  padding-right: 85px;
+}
+
+.endfield{
+  padding-right: 91px;
+}
+.testing {
+  padding-right: 10px;
 }
