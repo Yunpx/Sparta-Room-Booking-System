@@ -44,7 +44,7 @@
 
   <tbody>
     <% @days.bookings.each do |booking| %>
-        <% if booking.id % 7 == 0%>
+        <% if booking.id % 7 == 1%>
           <% if booking.note %>
             <tr></tr>
             <% if booking.room.room_name == "Mario" %>

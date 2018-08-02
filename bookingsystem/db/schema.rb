@@ -28,17 +28,14 @@ ActiveRecord::Schema.define(version: 2018_08_02_084228) do
     t.string "status"
     t.string "email"
     t.string "category"
-
+    t.integer "day_id"
     t.integer "starttime"
     t.integer "endtime"
-
-    t.integer "day_id"
   end
 
   create_table "days", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
   end
 
   create_table "rooms", force: :cascade do |t|

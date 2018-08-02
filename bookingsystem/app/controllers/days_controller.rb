@@ -10,9 +10,8 @@ class DaysController < ApplicationController
   # GET /days/1
   # GET /days/1.json
   def show
-    @day = Day.all.order("id DESC")
 
- @days = day.find(params[:id])
+ @days = Day.find(params[:id])
 
   end
 
