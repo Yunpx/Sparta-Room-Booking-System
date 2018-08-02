@@ -18,7 +18,19 @@
   float:left;
   text-align: center;
 }
-.waiting{
-  float:right;
-  text-align: center;
+
+
+/* Navbar section */
+.navbar-default {
+  background: #fff;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-brand{
+  font-size:20px;
+  color:#000;
+  font-weight:bold;
+}
+h1 {
+  padding-top: 15px;
 }

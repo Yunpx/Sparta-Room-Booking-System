@@ -27,6 +27,9 @@
 $(function() {
   $(".zelda").click(function(){
     $(this).addClass("zeldabg");
+    localStorage.setItem('name', 'zelda');
+    localStorage.setItem('v', this.getAttribute('data-num'));
+    window.location = "/bookings/new"
   });
   $(".mario").click(function(){
     $(this).addClass("mariobg");

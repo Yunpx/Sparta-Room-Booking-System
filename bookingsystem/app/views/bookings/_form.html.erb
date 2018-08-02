@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "bookings" %>
+
 <%= form_with(model: booking, local: true) do |form| %>
   <% if booking.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +12,7 @@
       </ul>
     </div>
   <% end %>
+
 <p><%=booking.id%></p>
   <div class="field">
       <%= form.label :Name %>
@@ -24,20 +27,21 @@
       <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
     </div>
 
-  <div class="field">
-    <%= form.label :Room_name %>
-    <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
-  </div>
+
+      <div class="field">
+        <%= form.label :Email, class:'namefield' %>
+        <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
+      </div>
 
     <div class="field">
-      <p><%= form.label :Participants %>
-      <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+      <%= form.label :Room_name, class:'roomfield' %>
+      <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
     </div>
 
-  <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :date %>
-  </div>
+      <div class="field">
+        <p><%= form.label :Participants, class:'participantsfield' %>
+        <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+      </div>
 
   <div class="field">
     <%= form.label :Start %>
@@ -67,14 +71,16 @@
       ['Sparta Day', 'Sparta Day'], ['Other', 'Other']]), {:prompt => "Select Category"} )%>
   </div>
 
-    <div class="field">
-      <%= form.label :Additional_Note %>
-      <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
-    </div>
 
+    <div class="field">
+      <%= form.label :Category, class: 'categoryfield' %>
+      <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'], ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
+    </div>
 
   <div class="actions">
     <%= form.submit "Book Room" %>
+
   </div>
+
 
 <% end %>
