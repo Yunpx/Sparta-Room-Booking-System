@@ -59,7 +59,7 @@
                 <% end %>
             <% else %>
                 <tr></tr>
-                <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking), :class => "available_link" %></td>
+                <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking) %></td>
             <% end %>
           <%else%>
             <% if booking.note %>
@@ -79,7 +79,7 @@
                 <td class="breakoutbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
               <% end %>
                         <% else %>
-              <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking), :class => "available_link" %><%= booking.user_id %></td>
+              <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking) %><%= booking.user_id %></td>
             <% end %>
           <%end%>
       <% end %>
