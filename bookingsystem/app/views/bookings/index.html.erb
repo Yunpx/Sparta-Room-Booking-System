@@ -42,7 +42,7 @@
           <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
           <% else %>
               <tr></tr>
-              <td><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+              <td><%= link_to booking.starttime, edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
