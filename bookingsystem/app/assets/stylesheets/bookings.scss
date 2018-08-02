@@ -117,14 +117,16 @@ a:hover {
   left: 430px;
 }
 
-a:link {
+.booking_field a:link {
     text-decoration: none;
     font-weight: bold;
+    color: #00cc00;
 }
 
-a:visited {
+.booking_field a:visited {
     text-decoration: none;
     font-weight: bold;
+    color: #00cc00;
 }
 
 .form_box {
@@ -161,7 +163,6 @@ a:visited {
 
 .calendar {
   margin-top: 35px;
-  border: 2px solid black;
 }
 
 .logo {
