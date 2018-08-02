@@ -272,3 +272,22 @@ top: 105px;
 .day:hover {
   background-color: lightgrey;
 }
+
+.day_main:hover {
+  background-color: lightgrey;
+}
+
+.day_main{
+  font-size: 1.4em;
+}
+
+.day_main a {
+  text-decoration: none;
+  color: black;
+}
+
+.day_main a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7em;
+}
