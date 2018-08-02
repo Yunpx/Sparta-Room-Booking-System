@@ -1,90 +1,72 @@
 <%= stylesheet_link_tag "bookings" %>
 <p id="notice"><%= notice %></p>
 
-
-<h1 class="heading">Bookings</h1>
-<div class="calendar">
-  <div class="timing">
-    <table class="table_border">
-      <th class="timeslot_heading">Time</th>
-      <tr><td class="timeslot"><strong>8:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>9:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>10:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>11:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>12:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>13:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>14:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>15:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>16:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>17:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>18:00</strong></td></tr>
-      <tr><td class="timeslot"><strong>19:00</strong></td></tr>
+<h1>Bookings</h1>
 
 
-    </table>
-  </div>
+<div class="timing">
+  <table>
+    <th>Time</th>
+    <tr><td>08:00</td></tr>
+    <tr><td>09:00</td></tr>
+    <tr><td>10:00</td></tr>
+    <tr><td>11:00</td></tr>
+    <tr><td>12:00</td></tr>
+    <tr><td>13:00</td></tr>
+    <tr><td>14:00</td></tr>
+    <tr><td>15:00</td></tr>
+    <tr><td>16:00</td></tr>
+    <tr><td>17:00</td></tr>
+    <tr><td>18:00</td></tr>
+    <tr><td>19:00</td></tr>
 
-  <table class="table_border">
-    <thead>
-      <tr>
-        <th class="zeldaheading">Zelda</th>
-        <th class="marioheading">Mario</th>
-        <th class="pacmanheading">Pac-Man</th>
-        <th class="froggerheading">Frogger</th>
-        <th class="cortanaheading">Cortana</th>
-        <th class="tetrisheading">Tetris</th>
-        <th class="breakoutheading">Breakout</th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @bookings.each do |booking| %>
-          <% if booking.id % 7 == 0%>
-            <% if booking.note %>
-              <tr></tr>
-              <% if booking.room.room_name == "Mario" %>
-                <td class="mariobg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif booking.room.room_name == "Zelda"%>
-                  <td class="zeldabg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif booking.room.room_name == "Pac-Man"  %>
-                  <td class="pacmanbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif  booking.room.room_name == "Frogger" %>
-                  <td class="froggerbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif booking.room.room_name == "Cortana" %>
-                  <td class="cortanabg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif booking.room.room_name == "Tetris" %>
-                  <td class="tetrisbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% elsif booking.room.room_name == "Breakout" %>
-                  <td class="breakoutbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-                <% end %>
-            <% else %>
-                <tr></tr>
-                <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking) %></td>
-            <% end %>
-          <%else%>
-            <% if booking.note %>
-            <% if booking.room.room_name == "Mario" %>
-              <td class="mariobg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif booking.room.room_name == "Zelda"%>
-                <td class="zeldabg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif booking.room.room_name == "Pac-Man"  %>
-                <td class="pacmanbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif  booking.room.room_name == "Frogger" %>
-                <td class="froggerbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif booking.room.room_name == "Cortana" %>
-                <td class="cortanabg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif booking.room.room_name == "Tetris" %>
-                <td class="tetrisbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% elsif booking.room.room_name == "Breakout" %>
-                <td class="breakoutbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
-              <% end %>
-                        <% else %>
-              <td class="booking_field"><%= link_to 'AVAILABLE', edit_booking_path(booking) %><%= booking.user_id %></td>
-            <% end %>
-          <%end%>
-      <% end %>
-    </tbody>
   </table>
+</div>
+<div>
+<table>
+  <thead>
+    <tr>
+    <% @rooms.each do |room| %>
+      <th><%=room.room_name%></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+        <% if booking.id % 7 == 0%>
+          <% if booking.note %>
+            <tr></tr>
+          <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+          <% else %>
+              <tr></tr>
+              <td><%= link_to booking.starttime, edit_booking_path(booking) %></td>
+          <% end %>
+        <%else%>
+          <% if booking.note %>
+            <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+            <% else %>
+              <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
+          <% end %>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="waiting">
+  <table>
+    <th>Waitinglist</th>
+    <% @bookings.each do |booking| %>
+    <%if booking.status == "PENDING"%>
+      <tr><td><%=booking.id%></td></tr>
+      <%end%>
+    <%end%>
+  </table>
+
+</div>
+<br>
+
 
   <br>
 </div>

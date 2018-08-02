@@ -4,7 +4,9 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all.order("id DESC")
+    @bookings = Booking.all.order("id ASC")
+    @rooms = Room.all.order("id ")
+
   end
 
   # GET /bookings/1
@@ -20,6 +22,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/1/edit
   def edit
+
   end
 
   # POST /bookings
@@ -40,10 +43,24 @@ class BookingsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
+
+  # if @booking.starttime != @booking.endtime
+  # else
+  # end
+
   def update
+    if user_signed_in?
+      @booking.status = "BOOKED"
+      @booking.user_id = current_user.id
+    else
+      @booking.status = "PENDING"
+      @booking.user_id = 1
+    end
+
+
+
     respond_to do |format|
       if @booking.update(booking_params)
         format.html { redirect_to @booking, notice: 'Booking was successfully updated.' }
@@ -53,6 +70,8 @@ class BookingsController < ApplicationController
         format.json { render json: @booking.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # DELETE /bookings/1
