@@ -41,16 +41,16 @@
 
   <div class="field">
     <%= form.label :Start %>
-      <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
-        ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
-        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]])) %>
+    <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
+      ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
+      ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]], :selected => @booking.starttime)) %>
   </div>
 
   <div class="field">
     <p><%= form.label :End %>
       <%= form.select(:endtime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
         ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
-        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]])) %>
+        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18], ['7pm', 19]], :selected => @booking.starttime + 1)) %>
   </div>
 
   <div class="field">

@@ -45,7 +45,7 @@ class BookingsController < ApplicationController
   end
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
-  
+
   # if @booking.starttime != @booking.endtime
   # else
   # end
