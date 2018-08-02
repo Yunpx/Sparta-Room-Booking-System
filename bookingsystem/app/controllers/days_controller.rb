@@ -10,7 +10,7 @@ class DaysController < ApplicationController
   # GET /days/1
   # GET /days/1.json
   def show
-
+    @call = Day.all
     @days = Day.find(params[:id])
     @bookings = @days.bookings.all.order("id DESC")
   end

@@ -48,7 +48,7 @@ user.save!
 
 
 
-for day in 1..5
+for day in 1..30
 
   Day.create([{
 
