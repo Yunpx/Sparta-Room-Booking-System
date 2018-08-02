@@ -60,65 +60,77 @@
 
 
 
-<h1>Bookings</h1>
-<div class="timing">
+<h1 class="heading">Bookings</h1>
+<div class="full_display">
+  <div class="timing">
+    <table>
+      <th>Time</th>
+      <tr><td class="timeslot">8:00</td></tr>
+      <tr><td class="timeslot">9:00</td></tr>
+      <tr><td class="timeslot">10:00</td></tr>
+      <tr><td class="timeslot">11:00</td></tr>
+      <tr><td class="timeslot">12:00</td></tr>
+      <tr><td class="timeslot">13:00</td></tr>
+      <tr><td class="timeslot">14:00</td></tr>
+      <tr><td class="timeslot">15:00</td></tr>
+      <tr><td class="timeslot">16:00</td></tr>
+      <tr><td class="timeslot">17:00</td></tr>
+      <tr><td class="timeslot">18:00</td></tr>
+      <tr><td class="timeslot">19:00</td></tr>
+
+
+    </table>
+  </div>
+
   <table>
-    <th>Time</th>
-    <tr><td>08:00</td></tr>
-    <tr><td>09:00</td></tr>
-    <tr><td>10:00</td></tr>
-    <tr><td>11:00</td></tr>
-    <tr><td>12:00</td></tr>
-    <tr><td>13:00</td></tr>
-    <tr><td>14:00</td></tr>
-    <tr><td>15:00</td></tr>
-    <tr><td>16:00</td></tr>
-    <tr><td>17:00</td></tr>
-    <tr><td>18:00</td></tr>
-    <tr><td>19:00</td></tr>
+    <thead>
+      <tr>
+        <th class="zeldaheading">Zelda</th>
+        <th class="marioheading">Mario</th>
+        <th class="pacmanheading">Pac-Man</th>
+        <th class="froggerheading">Frogger</th>
+        <th class="cortanaheading">Cortana</th>
+        <th class="tetrisheading">Tetris</th>
+        <th class="breakoutheading">Breakout</th>
+      </tr>
+    </thead>
 
+    <tbody>
+      <% @bookings.each do |booking| %>
+      <% if booking.id % 7 == 0%>
+        <% if booking.note %>
+        <tr></tr>
 
+        <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+
+        <% else %>
+        <tr></tr>
+
+            <td class="booking_field"><%=link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
+
+        <% end %>
+      <%else%>
+        <% if booking.note %>
+          <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+          <% else %>
+            <td class="booking_field"><%= link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
+        <% end %>
+      <%end%>
+      <% end %>
+    </tbody>
   </table>
+
+  <br>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Zelda</th>
-      <th>Mario</th>
-      <th>Pac-Man</th>
-      <th>Frogger</th>
-      <th>Cortana</th>
-      <th>Tetris</th>
-      <th>Breakout</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="waiting">
+  <table>
+    <th>Waitinglist</th>
     <% @bookings.each do |booking| %>
-    <% if booking.id % 7 == 0%>
-      <% if booking.note %>
-      <tr></tr>
-
-      <td class= <%= booking.room.room_name %>><%= link_to "booked", edit_booking_path(booking) %></td>
-
-      <% else %>
-      <tr></tr>
-
-          <td><%=link_to  "edit", edit_booking_path(booking) %></td>
-
-      <% end %>
-    <%else%>
-      <% if booking.note %>
-        <td class= <%= booking.room.room_name %>><%= link_to "booked", edit_booking_path(booking) %></td>
-        <% else %>
-          <td><%= link_to "edit", edit_booking_path(booking) %></td>
-      <% end %>
+    <%if booking.status == "PENDING"%>
+      <tr><td><%=booking.id%></td></tr>
+      <%end%>
     <%end%>
-    <% end %>
-  </tbody>
-</table>
+  </table>
 
-<br>
-
-<% link_to 'New Booking', new_booking_path %>
+</div>

@@ -12,70 +12,66 @@
       </ul>
     </div>
   <% end %>
-
-<p><%=booking.id%></p>
-  <div class="field">
-      <%= form.label :Name %>
-      <!-- Default value of textbox is User 1 if not logged in -->
-      <!-- Otherwise if logged in the textbox will display only the user logged in -->
-      <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
-    </div>
-
+  <div class="form_box">
     <div class="field">
-
-      <%= form.label :Email %>
-      <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
-    </div>
-
+        <%= form.label :Name %>
+        <!-- Default value of textbox is User 1 if not logged in -->
+        <!-- Otherwise if logged in the textbox will display only the user logged in -->
+        <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
+      </div>
 
       <div class="field">
-        <%= form.label :Email, class:'namefield' %>
+
+        <%= form.label :Email %>
         <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
       </div>
 
-    <div class="field">
-      <%= form.label :Room_name, class:'roomfield' %>
-      <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
-    </div>
-
       <div class="field">
-        <p><%= form.label :Participants, class:'participantsfield' %>
-        <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+        <%= form.label :Room_name, class:'roomfield' %>
+        <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
       </div>
 
-  <div class="field">
-    <%= form.label :Start %>
-    <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
-      ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
-      ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]], :selected => @booking.starttime)) %>
-  </div>
-
-  <div class="field">
-    <p><%= form.label :End %>
-      <%= form.select(:endtime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
-        ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
-        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18], ['7pm', 19]], :selected => @booking.starttime + 1)) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Importance %>
-    <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'],
-      ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Category %>
-    <%= form.select(:category, options_for_select([['Face-to-Face Interview', 'Face-to-Face Interview'], ['Phone Interview', 'Phone Interview'],
-      ['Mock exams', 'Mock exams'], ['Exams', 'Exams'], ['Presentation Rehersal', 'Presentation Rehersal'],
-      ['1-On-1', '1-On-1'], ['Client Visit', 'Client Visit'], ['Management Meeting', 'Management Meeting'],
-      ['Sparta Day', 'Sparta Day'], ['Other', 'Other']]), {:prompt => "Select Category"} )%>
-  </div>
-
+        <div class="field">
+          <p><%= form.label :Participants, class:'participantsfield' %>
+          <%= form.number_field :participants, :class => 'text_field', in: 1..15 %> Members</p>
+        </div>
 
     <div class="field">
-      <%= form.label :Category, class: 'categoryfield' %>
-      <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'], ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
+      <%= form.label :Start %>
+      <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
+        ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
+        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]], :selected => @booking.starttime)) %>
     </div>
+
+    <div class="field">
+      <p><%= form.label :End %>
+        <%= form.select(:endtime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
+          ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
+          ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18], ['7pm', 19]], :selected => @booking.starttime + 1)) %>
+    </div>
+
+    <div class="field importancefield" id="booking_importance">
+      <%= form.label :Importance%>
+      <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'],
+        ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
+    </div>
+
+    <div class="field categoryfield" id="booking_category">
+      <%= form.label :Category %>
+      <%= form.select(:category, options_for_select([['Face-to-Face Interview', 'Face-to-Face Interview'], ['Phone Interview', 'Phone Interview'],
+        ['Mock exams', 'Mock exams'], ['Exams', 'Exams'], ['Presentation Rehersal', 'Presentation Rehersal'],
+        ['1-On-1', '1-On-1'], ['Client Visit', 'Client Visit'], ['Management Meeting', 'Management Meeting'],
+        ['Sparta Day', 'Sparta Day'], ['Other', 'Other']]), {:prompt => "Select Category"} )%>
+    </div>
+
+    <div class="field">
+      <%= form.label :Additional_Notes %>
+      <%= form.text_area :note, placeholder: "Additional Notes About The Meeting..." %>
+    </div>
+  </div>
+
+
+
 
   <div class="actions">
     <%= form.submit "Book Room" %>

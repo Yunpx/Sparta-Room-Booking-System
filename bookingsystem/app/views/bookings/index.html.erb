@@ -41,13 +41,13 @@
           <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
           <% else %>
               <tr></tr>
-              <td><%= link_to booking.starttime, edit_booking_path(booking) %></td>
+              <td><%= link_to booking.starttime, booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
             <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
             <% else %>
-              <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
+              <td><%= link_to 'book', booking_path(booking) %><%= booking.user_id %></td>
           <% end %>
         <%end%>
     <% end %>

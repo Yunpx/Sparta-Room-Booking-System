@@ -18,13 +18,13 @@ th {
 }
 
 
-.mariobg, .mariobg a{
+.Mario, .Mario a{
   background-color: #ff6666;
   color: black;
   font-weight: bold;
 }
 
-.pacmanbg, .pacmanbg a{
+.Pac-Man, .Pac-Man a{
 
   background-color: #ffff66;
   color: black;
@@ -32,35 +32,35 @@ th {
 }
 
 
-.froggerbg, .froggerbg a{
+.Frogger, .Frogger a{
 
   background-color: #66ff66;
   color: black;
   font-weight: bold;
 }
 
-.cortanabg, .cortanabg a{
+.Cortana, .Cortana a{
 
   background-color: #ff66ff;
   color: black;
   font-weight: bold;
 }
 
-.zeldabg, .zeldabg a{
+.Zelda, .Zelda a{
 
   background-color: #ffcccc;
   color: black;
   font-weight: bold;
 }
 
-.tetrisbg, .tetrisbg a{
+.Tetris, .Tetris a{
 
   background-color: #cce6ff;
   color: black;
   font-weight: bold;
 }
 
-.breakoutbg, .breakoutbg a{
+.Breakout, .Breakout a{
 
   background-color: #ffcc80;
   color: black;
@@ -103,12 +103,12 @@ th {
 }
 
 .timeslot_heading {
-  width: 80px;
+  width: 40px;
   font-size: 1.5em;
 }
 
 .timeslot {
-  width: 50px;
+  width: 30px;
   font-size: 1.2em;
 }
 
@@ -118,10 +118,24 @@ th {
 
 a:hover {
   font-size: 1.1em;
+  text-decoration: none;
+  color: black;
 }
 
 .heading {
   font-family: "Comfortaa", cursive;
+  position: relative;
+  left: 130px;
+  top: -20px;
+}
+
+.timing {
+  width: 100px;
+}
+
+.full_display {
+  position: relative;
+  left: 130px;
 }
 
 .edit_heading {
@@ -130,13 +144,7 @@ a:hover {
   left: 430px;
 }
 
-.booking_field a:link {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-.booking_field a:visited {
+.booking_field {
     text-decoration: none;
     font-weight: bold;
     color: black;
@@ -239,9 +247,15 @@ a:hover {
 }
 
 #call {
-width: 300px;
+width: 250px;
 height: 20px;
 position: relative;
-left:-760px;
-top: 90px;
+left:-610px;
+top: 105px;
+}
+
+.waiting {
+  position: relative;
+  left: -135px;
+  bottom: 470px;
 }

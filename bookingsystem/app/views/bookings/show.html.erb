@@ -2,56 +2,57 @@
 
 <p id="notice"><%= notice %></p>
 
-<p><%=@booking.id%></p>
-<p>
-  <strong>Name:</strong>
-  <%= @booking.name %>
-</p>
+<div class="show_box">
+  <p>
+    <strong>Name:</strong>
+    <%= @booking.name %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @booking.email %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @booking.email %>
+  </p>
 
-<p>
-  <strong>Room Name:</strong>
-  <%= @booking.room.room_name %>
-</p>
+  <p>
+    <strong>Room Name:</strong>
+    <%= @booking.room.room_name %>
+  </p>
 
-<p>
-  <strong>Participants:</strong>
-  <%= @booking.participants %>
-</p>
+  <p>
+    <strong>Participants:</strong>
+    <%= @booking.participants %>
+  </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @booking.date %>
-</p>
+  <p>
+    <strong>Date:</strong>
+    <%= @booking.date %>
+  </p>
 
-<p>
-  <strong>Start Time:</strong>
-  <%= @booking.starttime%>
-</p>
+  <p>
+    <strong>Start Time:</strong>
+    <%= @booking.starttime%>
+  </p>
 
-<p>
-  <strong>End Time:</strong>
-  <%= @booking.endtime %>
-</p>
+  <p>
+    <strong>End Time:</strong>
+    <%= @booking.endtime %>
+  </p>
 
-<p>
-  <strong>Importance:</strong>
-  <%= @booking.importance %>
-</p>
+  <p>
+    <strong>Importance:</strong>
+    <%= @booking.importance %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @booking.category %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @booking.category %>
+  </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @booking.note %>
-</p>
+  <p>
+    <strong>Notes:</strong>
+    <%= @booking.note %>
+  </p>
+</div>
 
-<%= link_to 'Back', day_path(@booking.day_id) %>
 
+<%= link_to 'Back', day_path(@booking.day_id), :class => "back_button" %>
