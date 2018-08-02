@@ -22,8 +22,10 @@ class BookingsController < ApplicationController
 
   # GET /bookings/1/edit
   def edit
-    @booking =Booking.find(params[:id])
-
+    @booking = Booking.find(params[:id])
+    if booking.status == "BOOKED"
+      redirect_to root_path
+    end
   end
 
   # POST /bookings

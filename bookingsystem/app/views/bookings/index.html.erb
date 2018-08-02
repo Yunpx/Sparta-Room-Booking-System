@@ -3,11 +3,6 @@
 
 
 <h1>Bookings</h1>
-<% if user_signed_in? %>
-  <%= current_user.name %>
-<% else %>
-  <% userstatus=1 %>
-<% end %>
 
 <div class="timing">
   <table>
@@ -41,7 +36,7 @@
   <tbody>
     <% @bookings.each do |booking| %>
         <% if booking.id % 7 == 0%>
-          <% if booking.note %>
+          <% if booking.user_id==2 %>
             <tr></tr>
             <% if booking.room.room_name == "Mario" %>
               <td class="mariobg"><%= link_to booking.inspect, edit_booking_path(booking) %></td>
@@ -63,7 +58,7 @@
               <td><%= link_to booking.inspect, edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
-          <% if booking.note %>
+          <% if booking.user_id==2 %>
             <% if booking.room.room_name == "Mario" %>
               <td class="mariobg"><%= booking.starttime %></td>
               <% elsif booking.room.room_name == "Zelda"%>
@@ -83,7 +78,6 @@
               <td><%= link_to 'book', edit_booking_path(booking) %><%= booking.user_id %></td>
           <% end %>
         <%end%>
-
     <% end %>
   </tbody>
 </table>
