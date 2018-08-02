@@ -7,6 +7,58 @@
 <%= stylesheet_link_tag "bookings" %>
 <p id="notice"><%= notice %></p>
 
+  <div class="container " id="call">
+    <div class="row">
+      <div class="span12">
+        <table class="table-condensed table-bordered table-striped">
+          <thead>
+            <tr>
+              <th colspan="7">
+                <span class="btn-group">
+                  <a class="btn">
+                    <i class="icon-chevron-left"></i>
+                  </a>
+                  <a class="btn active">Month</a>
+                  <a class="btn">
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                </span>
+              </th>
+            </tr>
+            <tr>
+              <th>Mo</th>
+              <th>Tu</th>
+              <th>We</th>
+              <th>Th</th>
+              <th>Fr</th>
+              <th>Sa</th>
+              <th>Su</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% x = 0 %>
+
+              <% @call.each do |day| %>
+              <% if x%7 ==0 %>
+              </tr>
+            <% end %>
+
+                  <td>
+
+                    <%= link_to day.id, day %>
+                  </td>
+
+                <% x += 1 %><%  end  %>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
 
 <h1>Bookings</h1>
 <div class="timing">
@@ -69,4 +121,4 @@
 
 <br>
 
-<%= link_to 'New Booking', new_booking_path %>
+<% link_to 'New Booking', new_booking_path %>
