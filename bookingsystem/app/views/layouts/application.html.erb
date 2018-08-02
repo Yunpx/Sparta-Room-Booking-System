@@ -8,6 +8,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <%= stylesheet_link_tag "bookings" %>
   </head>
 
   <body>
@@ -17,11 +21,9 @@
     <!-- peter and sithanga -nav bar -->
     <nav class="navbar navbar-inverse">
       <div class="container">
-        <div class="navbar-header">
-          <%= link_to 'Sparta Room Booking System', root_path, class: 'navbar-brand' %>
-        </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
+            <img class="logo"src="assets/logo.png" alt="">
             <li><%= link_to 'Home', root_path %></li>
           </ul>
           <ul class="nav navbar-nav pull-right">
@@ -41,7 +43,6 @@
               </li>
             <% else %>
               <li><%= link_to 'Log In', new_user_session_path %></li>
-              <li><%= link_to 'Sign Up', new_user_registration_path %></li>
             <% end %>
           </ul>
         </div>
