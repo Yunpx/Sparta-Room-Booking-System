@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :bookings
   resources :rooms
+  resources :days
 
 
   root to: 'bookings#index'
