@@ -51,9 +51,13 @@ class BookingsController < ApplicationController
   # end
 
   def update
+    if @booking.starttime == @booking.endtime
+      @booking.endtime + 1
+    end
     if user_signed_in?
       @booking.status = "BOOKED"
       @booking.user_id = current_user.id
+
     else
       @booking.status = "PENDING"
       @booking.user_id = 1

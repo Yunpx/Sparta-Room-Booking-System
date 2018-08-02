@@ -13,20 +13,13 @@
     </div>
   <% end %>
 
-<p><%=booking.id%></p>
+
   <div class="field">
       <%= form.label :Name %>
       <!-- Default value of textbox is User 1 if not logged in -->
       <!-- Otherwise if logged in the textbox will display only the user logged in -->
       <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
     </div>
-
-    <div class="field">
-
-      <%= form.label :Email %>
-      <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
-    </div>
-
 
       <div class="field">
         <%= form.label :Email, class:'namefield' %>
@@ -71,11 +64,10 @@
       ['Sparta Day', 'Sparta Day'], ['Other', 'Other']]), {:prompt => "Select Category"} )%>
   </div>
 
-
-    <div class="field">
-      <%= form.label :Category, class: 'categoryfield' %>
-      <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'], ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
-    </div>
+  <div class="field">
+    <%= form.label :Additional_Notes %>
+    <%= form.text_area :note, placeholder: "Additional Notes About The Meeting..." %>
+  </div>
 
   <div class="actions">
     <%= form.submit "Book Room" %>
