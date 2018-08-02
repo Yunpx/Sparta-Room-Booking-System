@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <%= stylesheet_link_tag "bookings" %>
   </head>
 
@@ -37,7 +38,6 @@
                   <% if current_user.admin == true %>
                     <li><%= link_to 'Admin Panel', "http://localhost:3000/admin" %></li>
                   <% end %>
-                  <li><%= link_to 'Profile', edit_user_registration_path %></li>
                   <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
                 </ul>
               </li>

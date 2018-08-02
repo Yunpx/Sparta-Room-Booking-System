@@ -18,7 +18,7 @@ th {
 }
 
 .mariobg, .mariobg a{
-  background-color: #ff4444;
+  background-color: #ff6666;
   color: black;
   font-weight: bold;
 }
@@ -61,42 +61,47 @@ th {
 
 .marioheading{
   background-color: #ff1a1a;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .pacmanheading{
   background-color: #ffff00;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .froggerheading{
   background-color: #00ff00;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .cortanaheading{
   background-color: #ff00ff;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .zeldaheading{
   background-color: #ff6699;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .tetrisheading {
   background-color: #80ffff;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .breakoutheading{
   background-color: #ffa31a;
+  font-size: 1.6em;
+}
+
+.timeslot_heading {
+  width: 80px;
   font-size: 1.5em;
 }
 
 .timeslot {
-  width: 100px;
-  font-size: 1.5em;
+  width: 50px;
+  font-size: 1.2em;
 }
 
 .booking_field:hover {
@@ -108,25 +113,25 @@ a:hover {
 }
 
 .heading {
-  font-family: 'Modern Antiqua', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 .edit_heading {
   position: relative;
-  font-family: 'Modern Antiqua', cursive;
+  font-family: "Comfortaa", cursive;
   left: 430px;
 }
 
 .booking_field a:link {
     text-decoration: none;
     font-weight: bold;
-    color: #00cc00;
+    color: black;
 }
 
 .booking_field a:visited {
     text-decoration: none;
     font-weight: bold;
-    color: #00cc00;
+    color: black;
 }
 
 .form_box {
