@@ -3,6 +3,12 @@
 
 
 <h1>Bookings</h1>
+<% if user_signed_in? %>
+  <%= current_user.name %>
+<% else %>
+  <% userstatus=1 %>
+<% end %>
+
 <div class="timing">
   <table>
     <th>Time</th>
@@ -26,13 +32,9 @@
 <table>
   <thead>
     <tr>
-      <th>Zelda</th>
-      <th>Mario</th>
-      <th>Pac-Man</th>
-      <th>Frogger</th>
-      <th>Cortana</th>
-      <th>Tetris</th>
-      <th>Breakout</th>
+    <% @rooms.each do |room| %>
+      <th><%=room.room_name%></th>
+      <% end %>
     </tr>
   </thead>
 
