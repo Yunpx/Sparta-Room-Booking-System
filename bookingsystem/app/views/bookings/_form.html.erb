@@ -14,7 +14,7 @@
   <% end %>
   <div class="form_box">
     <div class="field">
-        <%= form.label :Name %>
+        <%= form.label :Name, class:"namefield" %>
         <!-- Default value of textbox is User 1 if not logged in -->
         <!-- Otherwise if logged in the textbox will display only the user logged in -->
         <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
@@ -22,7 +22,7 @@
 
       <div class="field">
 
-        <%= form.label :Email %>
+        <%= form.label :Email, class:"namefield"%>
         <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
       </div>
 
@@ -37,27 +37,27 @@
         </div>
 
     <div class="field">
-      <%= form.label :Start %>
+      <%= form.label :Start, class:"startfield" %>
       <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
         ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
         ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]], :selected => @booking.starttime)) %>
     </div>
 
     <div class="field">
-      <p><%= form.label :End %>
+      <p><%= form.label :End, class:"endfield"%>
         <%= form.select(:endtime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
           ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
           ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18], ['7pm', 19]], :selected => @booking.starttime + 1)) %>
     </div>
 
-    <div class="field importancefield" id="booking_importance">
-      <%= form.label :Importance%>
+    <div class="field">
+      <%= form.label :Importance, class:"importancefield"%>
       <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'],
         ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
     </div>
 
-    <div class="field categoryfield" id="booking_category">
-      <%= form.label :Category %>
+    <div class="field">
+      <%= form.label :Category, class:"categoryfield" %>
       <%= form.select(:category, options_for_select([['Face-to-Face Interview', 'Face-to-Face Interview'], ['Phone Interview', 'Phone Interview'],
         ['Mock exams', 'Mock exams'], ['Exams', 'Exams'], ['Presentation Rehersal', 'Presentation Rehersal'],
         ['1-On-1', '1-On-1'], ['Client Visit', 'Client Visit'], ['Management Meeting', 'Management Meeting'],
@@ -68,15 +68,16 @@
       <%= form.label :Additional_Notes %>
       <%= form.text_area :note, placeholder: "Additional Notes About The Meeting..." %>
     </div>
+    <div class="actions day_label">
+      <%= form.submit "Book Room" %>
+
+    </div>
   </div>
 
 
 
 
-  <div class="actions">
-    <%= form.submit "Book Room" %>
 
-  </div>
 
 
 <% end %>

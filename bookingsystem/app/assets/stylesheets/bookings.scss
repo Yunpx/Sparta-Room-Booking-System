@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 td {
-  border: solid 1px black;
+  border: solid 1px lightgrey;
   width: 150px;
   height: 80px;
   text-align: center;
@@ -12,7 +12,7 @@ td {
 th {
   width:200px;
   height:80px;
-  border: solid 1px black;
+  border: solid 1px lightgrey;
   text-align: center;
   font-family: "Comfortaa", cursive;
 }
@@ -129,6 +129,11 @@ a:hover {
   top: -20px;
 }
 
+.waiting_heading {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3em
+}
+
 .timing {
   width: 100px;
 }
@@ -165,7 +170,7 @@ a:hover {
 
 .show_box {
   position: relative;
-  border: 2px solid black;
+  border: 1px solid black;
   width: 350px;
   height: 400px;
   left: 375px;
@@ -180,6 +185,10 @@ a:hover {
   position: relative;
   left: 530px;
   top: 60px;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10%;
 }
 
 .calendar {
@@ -258,4 +267,8 @@ top: 105px;
   position: relative;
   left: -135px;
   bottom: 470px;
+}
+
+.day:hover {
+  background-color: lightgrey;
 }

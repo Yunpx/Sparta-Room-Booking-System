@@ -43,7 +43,7 @@
               </tr>
             <% end %>
 
-                  <td>
+                  <td class="day">
 
                     <%= link_to day.id, day %>
                   </td>
@@ -125,10 +125,10 @@
 
 <div class="waiting">
   <table>
-    <th>Waitinglist</th>
+    <th class="waiting_heading">Waiting List</th>
     <% @bookings.each do |booking| %>
     <%if booking.status == "PENDING"%>
-      <tr><td><%=booking.id%></td></tr>
+      <tr><td class="waiting_heading"><%=booking.id%></td></tr>
       <%end%>
     <%end%>
   </table>
