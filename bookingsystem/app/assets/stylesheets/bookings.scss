@@ -129,15 +129,15 @@ a:visited {
 
 .form_box {
   position: relative;
-  border: 2px solid black;
+  border: 1px solid black;
   width: 350px;
-  height: 400px;
   left: 375px;
   background-color: white;
-  text-align: center;
+  text-align: left;
   top: 35px;
-  padding: 25px;
-  border-radius: 5%;
+  padding: 15px;
+  border-radius: 2%;
+  line-height: 26px;
 }
 
 .show_box {
@@ -147,10 +147,10 @@ a:visited {
   height: 400px;
   left: 375px;
   background-color: white;
-  text-align: center;
+  text-align: left;
   top: 35px;
-  padding: 25px;
-  border-radius: 5%;
+  padding: 45px;
+  border-radius: 2%;
 }
 
 .back_button {
@@ -169,4 +169,53 @@ a:visited {
   height: 40px;
   position: relative;
   left: -200px;
+}
+
+.importancefield {
+  padding-right: 40px;
+}
+.categoryfield {
+  padding-right: 55px;
+}
+
+#booking_category {
+  width: 57%;
+}
+
+#booking_date_2i {
+    width: 23%;
+}
+
+#booking_importance {
+  width: 57%;
+}
+
+#booking_note {
+  width: 100%;
+}
+.namefield {
+  padding-right: 83px;
+}
+
+.roomfield {
+  padding-right: 38px;
+}
+
+.participantsfield{
+  padding-right: 38px;
+}
+
+.datefield{
+  padding-right: 87px;
+}
+
+.startfield{
+  padding-right: 85px;
+}
+
+.endfield{
+  padding-right: 91px;
+}
+.testing {
+  padding-right: 10px;
 }
