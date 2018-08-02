@@ -44,7 +44,15 @@ user.password = '123456'
 user.save!
 
 
-for day in 1..7 do
+
+
+
+
+for day in 0..5
+
+  Day.create([{
+
+    }])
 
 
 Booking.create([
@@ -593,5 +601,9 @@ Booking.create([
     day_id: day
   }
   ])
+
+
+
+
 
 end

@@ -1,4 +1,25 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
+<% @days.each do |days| %>
+
+<%= days.bookings.each do |books| %>
+<%= books.status %>
+<% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
 <%= link_to 'Edit', edit_day_path(@day) %> |
 <%= link_to 'Back', days_path %>
