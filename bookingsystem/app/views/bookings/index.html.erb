@@ -56,10 +56,10 @@
 </div>
 <div class="waiting">
   <table>
-    <th>Waitinglist</th>
+    <th class="list_size">Waitinglist</th>
     <% @bookings.each do |booking| %>
     <%if booking.status == "PENDING"%>
-      <tr><td><%=booking.id%></td></tr>
+      <tr><td class="list_size"><%=booking.id%></td></tr>
       <%end%>
     <%end%>
   </table>

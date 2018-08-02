@@ -125,7 +125,7 @@
 
 <div class="waiting">
   <table>
-    <th class="waiting_heading">Waiting List</th>
+    <th class="waiting_heading list_size">Waiting List</th>
     <% @bookings.each do |booking| %>
     <%if booking.status == "PENDING"%>
       <tr><td class="waiting_heading"><%=booking.id%></td></tr>
