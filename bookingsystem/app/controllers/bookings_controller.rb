@@ -5,6 +5,8 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all.order("id DESC")
+    @rooms = Room.all.order("id ")
+
   end
 
   # GET /bookings/1
@@ -20,7 +22,8 @@ class BookingsController < ApplicationController
 
   # GET /bookings/1/edit
   def edit
-  @booking = Booking.find(params[:id])
+    @booking =Booking.find(params[:id])
+
   end
 
   # POST /bookings
@@ -51,7 +54,6 @@ class BookingsController < ApplicationController
     else
       @booking.status = "PENDING"
       @booking.user_id = 1
-
     end
 
     respond_to do |format|
