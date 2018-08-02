@@ -40,22 +40,28 @@
 
   <div class="field">
     <%= form.label :Start %>
-    <%= form.time_select :starttime, {:minute_step => 60, start_hour: 8, end_hour: 19} %>
+      <%= form.select(:starttime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
+        ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
+        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]])) %>
   </div>
 
   <div class="field">
     <p><%= form.label :End %>
-    <%= form.time_select :endtime, {:minute_step => 60, start_hour: 8, end_hour: 19} %>
+      <%= form.select(:endtime, options_for_select([['8am', 8], ['9am', 9], ['10am', 10],
+        ['11am', 11], ['12pm', 12], ['1pm', 13], ['2pm', 14],
+        ['3pm', 15], ['4pm', 16], ['5pm', 17], ['6pm', 18]])) %>
   </div>
 
   <div class="field">
     <%= form.label :Importance %>
-    <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'], ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
+    <%= form.select(:importance, options_for_select([['Normal-!', '!'], ['Important-!!', '!!'],
+      ['Urgent-!!!', '!!!']]), {:prompt => "Select Importance"}) %>
   </div>
 
   <div class="field">
     <%= form.label :Category %>
-    <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'], ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
+    <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'],
+      ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
   </div>
 
     <div class="field">
