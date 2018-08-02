@@ -46,8 +46,9 @@
     <% @days.bookings.each do |booking| %>
     <% if booking.id % 7 == 0%>
       <% if booking.note %>
-        <tr></tr>
       <td class= <%= booking.room.room_name %>><%= link_to booking.id, edit_booking_path(booking) %></td>
+      <tr></tr>
+
       <% else %>
           <td><%= link_to booking.id, edit_booking_path(booking) %></td>
           <tr></tr>

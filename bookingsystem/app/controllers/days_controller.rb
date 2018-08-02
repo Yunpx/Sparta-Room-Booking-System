@@ -11,8 +11,7 @@ class DaysController < ApplicationController
   # GET /days/1.json
   def show
 
-    @days = Day.find(params[:id]).order("id DESC")
-
+    @days = Day.find(params[:id])
 
   end
 
