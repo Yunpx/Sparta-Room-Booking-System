@@ -61,14 +61,17 @@
 
   <div class="field">
     <%= form.label :Category %>
-    <%= form.select(:category, options_for_select([['Team Huddle', 'Team Huddle'], ['Client Interview', 'Client Interview'],
-      ['Team Meeting', 'Team Meeting'], ['Executive Meeting', 'Executive Meeting'], ['Phone Interview', 'Phone Interview']]), {:prompt => "Select Category"} )%>
+    <%= form.select(:category, options_for_select([['Face-to-Face Interview', 'Face-to-Face Interview'], ['Phone Interview', 'Phone Interview'],
+      ['Mock exams', 'Mock exams'], ['Exams', 'Exams'], ['Presentation Rehersal', 'Presentation Rehersal'],
+      ['1-On-1', '1-On-1'], ['Client Visit', 'Client Visit'], ['Management Meeting', 'Management Meeting'],
+      ['Sparta Day', 'Sparta Day'], ['Other', 'Other']]), {:prompt => "Select Category"} )%>
   </div>
 
     <div class="field">
       <%= form.label :Additional_Note %>
       <%= form.text_area :note, placeholder: "Reason For Meeting? \nParticipants?" %>
     </div>
+
 
   <div class="actions">
     <%= form.submit "Book Room" %>

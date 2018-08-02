@@ -44,9 +44,13 @@ class BookingsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
+  
+  # if @booking.starttime != @booking.endtime
+  # else
+  # end
+
   def update
     if user_signed_in?
       @booking.status = "BOOKED"
@@ -55,6 +59,8 @@ class BookingsController < ApplicationController
       @booking.status = "PENDING"
       @booking.user_id = 1
     end
+
+
 
     respond_to do |format|
       if @booking.update(booking_params)

@@ -44,9 +44,9 @@
           <% if booking.note %>
             <tr></tr>
             <% if booking.room.room_name == "Mario" %>
-              <td class="mariobg"><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+              <td class="mariobg"><%= link_to booking.starttime, edit_booking_path(booking) %></td>
               <% elsif booking.room.room_name == "Zelda"%>
-                <td class="zeldabg"><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+                <td class="zeldabg"><%= link_to booking.starttime, edit_booking_path(booking) %></td>
               <% elsif booking.room.room_name == "Pac-Man"  %>
                 <td class="pacmanbg"><%= booking.starttime %></td>
               <% elsif  booking.room.room_name == "Frogger" %>
@@ -60,7 +60,7 @@
               <% end %>
           <% else %>
               <tr></tr>
-              <td><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+              <td><%= link_to booking.starttime, edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
