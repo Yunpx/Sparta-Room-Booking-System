@@ -17,32 +17,46 @@ th {
   font-family: "Comfortaa", cursive;
 }
 
-.mariobg{
+.mariobg, .mariobg a{
   background-color: #ff4444;
+  color: black;
+  font-weight: bold;
 }
 
-.pacmanbg{
+.pacmanbg, .pacmanbg a{
   background-color: #ffff66;
+  color: black;
+  font-weight: bold;
 }
 
-.froggerbg{
+.froggerbg, .froggerbg a{
   background-color: #66ff66;
+  color: black;
+  font-weight: bold;
 }
 
-.cortanabg{
+.cortanabg, .cortanabg a{
   background-color: #ff66ff;
+  color: black;
+  font-weight: bold;
 }
 
-.zeldabg{
+.zeldabg, .zeldabg a{
   background-color: #ffcccc;
+  color: black;
+  font-weight: bold;
 }
 
-.tetrisbg {
+.tetrisbg, .tetrisbg a{
   background-color: #cce6ff;
+  color: black;
+  font-weight: bold;
 }
 
-.breakoutbg{
+.breakoutbg, .breakoutbg a{
   background-color: #ffcc80;
+  color: black;
+  font-weight: bold;
 }
 
 .marioheading{
@@ -91,4 +105,18 @@ th {
 
 a:hover {
   font-size: 1.1em;
+}
+
+.heading {
+  font-family: 'Modern Antiqua', cursive;
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none;
+    font-weight: bold;
 }
