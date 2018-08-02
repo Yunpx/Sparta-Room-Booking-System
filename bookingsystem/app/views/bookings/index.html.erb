@@ -4,7 +4,7 @@
 
 <h1>Bookings</h1>
 <div class="timing">
-  <table>
+  <table class="table_border">
     <th class="timeslot">Time</th>
     <tr><td class="timeslot"><strong>8:00</strong></td></tr>
     <tr><td class="timeslot"><strong>9:00</strong></td></tr>
@@ -23,7 +23,7 @@
   </table>
 </div>
 
-<table>
+<table class="table_border">
   <thead>
     <tr>
       <th class="zeldaheading">Zelda</th>
@@ -58,7 +58,7 @@
               <% end %>
           <% else %>
               <tr></tr>
-              <td><%= link_to 'BOOK', edit_booking_path(booking) %></td>
+              <td class="booking_field"><%= link_to 'BOOK', edit_booking_path(booking) %></td>
           <% end %>
         <%else%>
           <% if booking.note %>
@@ -78,7 +78,7 @@
               <td class="breakoutbg"><%= link_to 'BOOKED', booking_path(booking) %></td>
             <% end %>
                       <% else %>
-            <td><%= link_to 'BOOK', edit_booking_path(booking) %><%= booking.user_id %></td>
+            <td class="booking_field"><%= link_to 'BOOK', edit_booking_path(booking) %><%= booking.user_id %></td>
           <% end %>
         <%end%>
     <% end %>

@@ -6,6 +6,7 @@ td {
   width: 150px;
   height: 80px;
   text-align: center;
+  font-family: "Comfortaa", cursive;
 }
 
 th {
@@ -13,7 +14,9 @@ th {
   height:80px;
   border: solid 1px black;
   text-align: center;
+  font-family: "Comfortaa", cursive;
 }
+
 .mariobg{
   background-color: #ff4444;
 }
@@ -43,7 +46,7 @@ th {
 }
 
 .marioheading{
-  background-color: #ff0000;
+  background-color: #ff1a1a;
   font-size: 1.5em;
 }
 
@@ -80,4 +83,12 @@ th {
 .timeslot {
   width: 100px;
   font-size: 1.5em;
+}
+
+.booking_field:hover {
+    background-color: lightgrey;
+}
+
+a:hover {
+  font-size: 1.1em;
 }
