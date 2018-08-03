@@ -1,0 +1,136 @@
+
+
+
+<!-- start  -->
+
+
+<%= stylesheet_link_tag "bookings" %>
+<p id="notice"><%= notice %></p>
+
+  <div class="container " id="call">
+    <div class="row">
+      <div class="span12">
+        <table class="table-condensed table-bordered table-striped">
+          <thead>
+            <tr>
+              <th colspan="7">
+                <span class="btn-group">
+                  <a class="btn">
+                    <i class="icon-chevron-left"></i>
+                  </a>
+                  <a class="btn active">Month</a>
+                  <a class="btn">
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                </span>
+              </th>
+            </tr>
+            <tr>
+              <th>Mo</th>
+              <th>Tu</th>
+              <th>We</th>
+              <th>Th</th>
+              <th>Fr</th>
+              <th>Sa</th>
+              <th>Su</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% x = 0 %>
+
+              <% @call.each do |day| %>
+              <% if x%7 ==0 %>
+              </tr>
+            <% end %>
+
+                  <td class="day">
+
+                    <%= link_to day.id, day %>
+                  </td>
+
+                <% x += 1 %><%  end  %>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+<h1 class="heading">Bookings</h1>
+<div class="full_display">
+  <div class="timing">
+    <table>
+      <th>Time</th>
+      <tr><td class="timeslot">8:00</td></tr>
+      <tr><td class="timeslot">9:00</td></tr>
+      <tr><td class="timeslot">10:00</td></tr>
+      <tr><td class="timeslot">11:00</td></tr>
+      <tr><td class="timeslot">12:00</td></tr>
+      <tr><td class="timeslot">13:00</td></tr>
+      <tr><td class="timeslot">14:00</td></tr>
+      <tr><td class="timeslot">15:00</td></tr>
+      <tr><td class="timeslot">16:00</td></tr>
+      <tr><td class="timeslot">17:00</td></tr>
+      <tr><td class="timeslot">18:00</td></tr>
+      <tr><td class="timeslot">19:00</td></tr>
+
+
+    </table>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="zeldaheading">Zelda</th>
+        <th class="marioheading">Mario</th>
+        <th class="pacmanheading">Pac-Man</th>
+        <th class="froggerheading">Frogger</th>
+        <th class="cortanaheading">Cortana</th>
+        <th class="tetrisheading">Tetris</th>
+        <th class="breakoutheading">Breakout</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @bookings.each do |booking| %>
+      <% if booking.id % 7 == 0%>
+        <% if booking.note %>
+        <tr></tr>
+
+        <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+
+        <% else %>
+        <tr></tr>
+
+            <td class="booking_field"><%=link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
+
+        <% end %>
+      <%else%>
+        <% if booking.note %>
+          <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+          <% else %>
+            <td class="booking_field"><%= link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
+        <% end %>
+      <%end%>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
+
+<div class="waiting">
+  <table>
+    <th class="waiting_heading list_size">Waiting List</th>
+    <% @bookings.each do |booking| %>
+    <%if booking.status == "PENDING"%>
+      <tr><td class="waiting_heading"><%=booking.id%></td></tr>
+      <%end%>
+    <%end%>
+  </table>
+
+</div>

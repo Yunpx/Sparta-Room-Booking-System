@@ -1,0 +1,70 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.rooms {
+  margin: 0 auto;
+  border-radius:10px;
+}
+.roomsblock {
+  border: 1px solid black;
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.mariobg{
+  background-color: #ff4444;
+}
+
+.pacmanbg{
+  background-color: #ffff66;
+}
+
+.froggerbg{
+  background-color: #66ff66;
+}
+
+.cortanabg{
+  background-color: #ff66ff;
+}
+
+.zeldabg{
+  background-color: #ffcccc;
+}
+
+.tetrisbg {
+  background-color: #cce6ff;
+}
+
+.breakoutbg{
+  background-color: #ffcc80;
+}
+
+.marioheading{
+  background-color: #ff0000;
+}
+
+.pacmanheading{
+  background-color: #ffff00;
+}
+
+.froggerheading{
+  background-color: #00ff00;
+}
+
+.cortanaheading{
+  background-color: #ff00ff;
+}
+
+.zeldaheading{
+  background-color: #ff6699;
+}
+
+.tetrisheading {
+  background-color: #80ffff;
+}
+
+.breakoutheading{
+  background-color: #ffa31a;
+}

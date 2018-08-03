@@ -1,0 +1,338 @@
+// Place all the styles related to the bookings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+td {
+  border: solid 1px lightgrey;
+  width: 150px;
+  height: 80px;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+}
+
+th {
+  width:200px;
+  height:80px;
+  border: solid 1px lightgrey;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+}
+
+
+.Mario, .Mario a{
+  background-color: #ff6666;
+  color: black;
+  font-weight: bold;
+}
+
+.Pac-Man, .Pac-Man a{
+
+  background-color: #ffff66;
+  color: black;
+  font-weight: bold;
+}
+
+
+.Frogger, .Frogger a{
+
+  background-color: #66ff66;
+  color: black;
+  font-weight: bold;
+}
+
+.Cortana, .Cortana a{
+
+  background-color: #ff66ff;
+  color: black;
+  font-weight: bold;
+}
+
+.Zelda, .Zelda a{
+
+  background-color: #ffcccc;
+  color: black;
+  font-weight: bold;
+}
+
+.Tetris, .Tetris a{
+
+  background-color: #cce6ff;
+  color: black;
+  font-weight: bold;
+}
+
+.Breakout, .Breakout a{
+
+  background-color: #ffcc80;
+  color: black;
+  font-weight: bold;
+}
+
+.marioheading{
+  background-color: #ff1a1a;
+  font-size: 1.6em;
+}
+
+.pacmanheading{
+  background-color: #ffff00;
+  font-size: 1.6em;
+}
+
+.froggerheading{
+  background-color: #00ff00;
+  font-size: 1.6em;
+}
+
+.cortanaheading{
+  background-color: #ff00ff;
+  font-size: 1.6em;
+}
+
+.zeldaheading{
+  background-color: #ff6699;
+  font-size: 1.6em;
+}
+
+.tetrisheading {
+  background-color: #80ffff;
+  font-size: 1.6em;
+}
+
+.breakoutheading{
+  background-color: #ffa31a;
+  font-size: 1.6em;
+}
+
+.timeslot_heading {
+  width: 40px;
+  font-size: 1.5em;
+}
+
+.timeslot {
+  width: 30px;
+  font-size: 1.2em;
+}
+
+.booking_field:hover {
+    background-color: lightgrey;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+a:hover {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: black;
+}
+
+.heading {
+  font-family: "Comfortaa", cursive;
+  position: relative;
+  left: 130px;
+  top: -20px;
+}
+
+.waiting_heading {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3em
+}
+
+.timing {
+  width: 100px;
+}
+
+.full_display {
+  position: relative;
+  left: 130px;
+}
+
+.edit_heading {
+  position: relative;
+  font-family: "Comfortaa", cursive;
+  left: 430px;
+}
+
+.booking_field {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.form_box {
+  position: relative;
+  border: 1px solid black;
+  width: 350px;
+  left: 375px;
+  background-color: #fcfcfc;
+  text-align: left;
+  top: 35px;
+  padding: 15px;
+  border-radius: 2%;
+  line-height: 26px;
+}
+
+.show_box {
+  position: relative;
+  border: 1px solid black;
+  width: 350px;
+  height: 400px;
+  left: 375px;
+  background-color: #fcfcfc;
+  text-align: left;
+  top: 35px;
+  padding: 45px;
+  border-radius: 2%;
+}
+
+.back_button {
+  position: relative;
+  left: 530px;
+  top: 60px;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.calendar {
+  margin-top: 35px;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  left: -200px;
+}
+
+.importancefield {
+  padding-right: 40px;
+}
+.categoryfield {
+  padding-right: 55px;
+}
+
+#booking_category {
+  width: 57%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_date_2i {
+    width: 23%;
+    border: 1px solid #e5e5e5;
+    background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_importance {
+  width: 57%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_note {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_room_id {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_participants {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_starttime {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+#booking_endtime {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}
+
+.namefield {
+  padding-right: 83px;
+}
+
+.roomfield {
+  padding-right: 38px;
+}
+
+.participantsfield{
+  padding-right: 38px;
+}
+
+.datefield{
+  padding-right: 87px;
+}
+
+.startfield{
+  padding-right: 85px;
+}
+
+.endfield{
+  padding-right: 91px;
+}
+.testing {
+  padding-right: 10px;
+}
+
+.day_label {
+  text-align: center;
+}
+
+#call {
+width: 250px;
+height: 20px;
+position: relative;
+left:-610px;
+top: 105px;
+}
+
+.waiting {
+  position: relative;
+  left: -165px;
+  bottom: 470px;
+}
+
+.day:hover {
+  background-color: lightgrey;
+}
+
+.day_main:hover {
+  background-color: lightgrey;
+  color: black;
+  font-size: 2.1em;
+  text-decoration: none;
+}
+
+.day_main{
+  font-size: 1.8em;
+}
+
+.day_main a {
+  text-decoration: none;
+  color: black;
+}
+
+.day_main a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7em;
+}
+
+.list_size {
+  width: 250px;
+}
+
+.userinput {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top, white, #f0f0f0);
+}

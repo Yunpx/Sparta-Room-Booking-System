@@ -1,0 +1,198 @@
+<p id="notice"></p>
+
+<%= stylesheet_link_tag "rooms" %>
+
+<div class="waitingList">
+  <% if current_user %>
+    <% @bookings.each do |booking| %>
+    <% if booking.status == 'Pending' %>
+    <ul>
+      <li>
+        <tr>
+          <td><% room.room_name %> </td>
+          <td><% booking.date %> </td>
+          <td><% booking.starttime %> </td>
+          <td><% booking.endtime %> </td>
+          <td><% booking.note %> </td>
+        </tr>
+      </li>
+    </ul>
+    <% end %>
+   <% end %>
+  <% end %>
+</div>
+
+<h1>Rooms</h1>
+<table class="rooms" id="number">
+    <thead>
+      <tr>
+        <td class="roomsblock" data-num="0"></td>
+        <td class="roomsblock zeldaheading" data-num="1">Zelda</td>
+        <td class="roomsblock marioheading" data-num="2">Mario</td>
+        <td class="roomsblock pacmanheading" data-num="3">Pac-man</td>
+        <td class="roomsblock froggerheading" data-num="4">Frogger</td>
+        <td class="roomsblock cortanaheading" data-num="5">Cortana</td>
+        <td class="roomsblock tetrisheading" data-num="6">Tetris</td>
+        <td class="roomsblock breakoutheading" data-num="7">Breakout</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="8">08:00</td>
+        <td class="roomsblock timeslot zelda" data-num="9"></td>
+        <td class="roomsblock timeslot mario" data-num="10"></td>
+        <td class="roomsblock timeslot pacman" data-num="11"></td>
+        <td class="roomsblock timeslot frogger" data-num="12"></td>
+        <td class="roomsblock timeslot cortana" data-num="13"></td>
+        <td class="roomsblock timeslot tetris" data-num="14"></td>
+        <td class="roomsblock timeslot breakout" data-num="15"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="16">09:00</td>
+        <td class="roomsblock timeslot zelda" data-num="17"></td>
+        <td class="roomsblock timeslot mario" data-num="18"></td>
+        <td class="roomsblock timeslot pacman" data-num="19"></td>
+        <td class="roomsblock timeslot frogger" data-num="20"></td>
+        <td class="roomsblock timeslot cortana" data-num="21"></td>
+        <td class="roomsblock timeslot tetris" data-num="22"></td>
+        <td class="roomsblock timeslot breakout" data-num="23"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="24">10:00</td>
+        <td class="roomsblock timeslot zelda" data-num="25"></td>
+        <td class="roomsblock timeslot mario" data-num="26"></td>
+        <td class="roomsblock timeslot pacman" data-num="27"></td>
+        <td class="roomsblock timeslot frogger" data-num="28"></td>
+        <td class="roomsblock timeslot cortana" data-num="29"></td>
+        <td class="roomsblock timeslot tetris" data-num="30"></td>
+        <td class="roomsblock timeslot breakout" data-num="31"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="32">11:00</td>
+        <td class="roomsblock timeslot zelda" data-num="33"></td>
+        <td class="roomsblock timeslot mario" data-num="34"></td>
+        <td class="roomsblock timeslot pacman" data-num="35"></td>
+        <td class="roomsblock timeslot frogger" data-num="36"></td>
+        <td class="roomsblock timeslot cortana" data-num="37"></td>
+        <td class="roomsblock timeslot tetris" data-num="38"></td>
+        <td class="roomsblock timeslot breakout" data-num="39"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="40">12:00</td>
+        <td class="roomsblock timeslot zelda" data-num="41"></td>
+        <td class="roomsblock timeslot mario" data-num="42"></td>
+        <td class="roomsblock timeslot pacman" data-num="43"></td>
+        <td class="roomsblock timeslot frogger" data-num="44"></td>
+        <td class="roomsblock timeslot cortana" data-num="45"></td>
+        <td class="roomsblock timeslot tetris" data-num="46"></td>
+        <td class="roomsblock timeslot breakout" data-num="47"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="48">13:00</td>
+        <td class="roomsblock timeslot zelda" data-num="49"></td>
+        <td class="roomsblock timeslot mario" data-num="50"></td>
+        <td class="roomsblock timeslot pacman" data-num="51"></td>
+        <td class="roomsblock timeslot frogger" data-num="52"></td>
+        <td class="roomsblock timeslot cortana" data-num="53"></td>
+        <td class="roomsblock timeslot tetris" data-num="54"></td>
+        <td class="roomsblock timeslot breakout" data-num="55"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="56">14:00</td>
+        <td class="roomsblock timeslot zelda" data-num="57"></td>
+        <td class="roomsblock timeslot mario" data-num="58"></td>
+        <td class="roomsblock timeslot pacman" data-num="59"></td>
+        <td class="roomsblock timeslot frogger" data-num="60"></td>
+        <td class="roomsblock timeslot cortana" data-num="61"></td>
+        <td class="roomsblock timeslot tetris" data-num="62"></td>
+        <td class="roomsblock timeslot breakout" data-num="63"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="64">15:00</td>
+        <td class="roomsblock timeslot zelda" data-num="65"></td>
+        <td class="roomsblock timeslot mario" data-num="66"></td>
+        <td class="roomsblock timeslot pacman" data-num="67"></td>
+        <td class="roomsblock timeslot frogger" data-num="68"></td>
+        <td class="roomsblock timeslot cortana" data-num="69"></td>
+        <td class="roomsblock timeslot tetris" data-num="70"></td>
+        <td class="roomsblock timeslot breakout" data-num="71"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="71">16:00</td>
+        <td class="roomsblock timeslot zelda" data-num="72"></td>
+        <td class="roomsblock timeslot mario" data-num="73"></td>
+        <td class="roomsblock timeslot pacman" data-num="74"></td>
+        <td class="roomsblock timeslot frogger" data-num="75"></td>
+        <td class="roomsblock timeslot cortana" data-num="76"></td>
+        <td class="roomsblock timeslot tetris" data-num="77"></td>
+        <td class="roomsblock timeslot breakout" data-num="78"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="79">17:00</td>
+        <td class="roomsblock timeslot zelda" data-num="80"></td>
+        <td class="roomsblock timeslot mario" data-num="81"></td>
+        <td class="roomsblock timeslot pacman" data-num="82"></td>
+        <td class="roomsblock timeslot frogger" data-num="83"></td>
+        <td class="roomsblock timeslot cortana" data-num="84"></td>
+        <td class="roomsblock timeslot tetris" data-num="85"></td>
+        <td class="roomsblock timeslot breakout" data-num="86"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="roomsblock" data-num="87">18:00</td>
+        <td class="roomsblock timeslot zelda" data-num="88"></td>
+        <td class="roomsblock timeslot mario" data-num="89"></td>
+        <td class="roomsblock timeslot pacman" data-num="90"></td>
+        <td class="roomsblock timeslot frogger" data-num="91"></td>
+        <td class="roomsblock timeslot cortana" data-num="92"></td>
+        <td class="roomsblock timeslot tetris" data-num="93"></td>
+        <td class="roomsblock timeslot breakout" data-num="94"></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="roomsblock" data-num="95">19:00</td>
+        <td class="roomsblock timeslot zelda" data-num="96"></td>
+        <td class="roomsblock timeslot mario" data-num="97"></td>
+        <td class="roomsblock timeslot pacman" data-num="98"></td>
+        <td class="roomsblock timeslot frogger" data-num="99"></td>
+        <td class="roomsblock timeslot cortana" data-num="100"></td>
+        <td class="roomsblock timeslot tetris" data-num="101"></td>
+        <td class="roomsblock timeslot breakout" data-num="102"></td>
+      </tr>
+    </tfoot>
+  </table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+</table>
+
+<br>
+
+<%= link_to 'New Room', new_room_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "bookings" %>
+<%= stylesheet_link_tag "application" %>
+
+<h1>August</h1>
+  <table id='calendar'>
+   <tr>
+     <th class="day_label">Sunday</th><th class="day_label">Monday</th>
+     <th class="day_label">Tuesday</th><th class="day_label">Wednesday</th>
+     <th class="day_label">Thursday</th><th class="day_label">Friday</th>
+     <th class="day_label">Saturday</th>
+    </tr>
+    <tr>
+      <% i = 0 %>
+      <% u = 0 %>
+
+      <% day_store = {} %>
+
+      <% @days.each do |day| %>
+        <%  day_store[i] = day %>
+        <%  i += 1 %>
+      <% end %>
+
+    <% @beginning_of_month = Date.current.beginning_of_month %>
+    <% @end_of_month = Date.current.end_of_month %>
+
+  <% (@beginning_of_month..@end_of_month).each do |d| %>
+      <% if d == @beginning_of_month %>
+        <% d.wday.times do %> <td class='offset'></td> <% end %>
+      <% end %>
+
+
+  <% if d.wday == 0 %> </tr><tr> <% end %>
+    <td class="day"> <%= link_to d.day, day_store[u], class: "day_main" %> </td>
+    <% u += 1 %>
+  <% end %>
+
+    </tr>
+  </table>

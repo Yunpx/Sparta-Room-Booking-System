@@ -1,0 +1,29 @@
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>Register to get started.</p>
+    </div>
+
+    <!---- If a user is not signed in a form is rendered ---->
+    <% if !user_signed_in? %>
+      <%= render 'form', booking: @booking %>
+    <% end %>
+
+    <!---- Booking status of non-users should be pending automatically. this method displays all the  ---->
+    <ul>
+     <% @bookings.each do |booking| %>
+      <% if booking.status == 'Pending' && current_user.isAdmin %>
+       <li>
+        <tr>
+         <td><%= booking.user_id %></td>
+         <td><%= booking.room_id %></td>
+         <td><%= link_to 'Accept', edit_booking_path(booking) %></td>
+         <td><%= link_to 'Deny', edit_booking_path(booking) %></td>
+        </tr>
+       </li>
+      <%end%>
+     <%end%>
+    </ul>
+  </div>
+<% end %>

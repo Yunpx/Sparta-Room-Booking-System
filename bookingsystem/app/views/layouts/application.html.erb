@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookingsystem</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+    <%= stylesheet_link_tag "bookings" %>
+  </head>
+
+  <body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav navbar-nav">
+            <img class="logo"src="assets/logo.png" alt="">
+            <li><%= link_to 'Home', root_path %></li>
+          </ul>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <%= current_user.name %>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <% if current_user.admin == true %>
+                    <li><%= link_to 'Admin Panel', "http://localhost:3000/admin" %></li>
+                  <% end %>
+                  <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><%= link_to 'Log In', new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <!-- peter and sithanga -nav bar -->
+    <!-- <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div id="navbar">
+          <ul class="nav navbar-nav">
+            <img class="logo"src="assets/logo.png" alt="">
+            <li><%= link_to 'Home', root_path %></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <%= current_user.name %>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <% if current_user.admin == true %>
+                    <li><%= link_to 'Admin Panel', "http://localhost:3000/admin" %></li>
+                  <% end %>
+                  <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><%= link_to 'Log In', new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <!-- nav bar end -->
+
+
+
+
+
+
+
+    <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= yield :top_content %>
+
+  <div class="container">
+      <h1><%= yield :header %></h1>
+    <%= yield %>
+  </div>
+
+  </body>
+</html>

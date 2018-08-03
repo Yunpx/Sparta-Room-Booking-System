@@ -1,0 +1,72 @@
+<%= stylesheet_link_tag "bookings" %>
+<p id="notice"><%= notice %></p>
+
+<h1>Bookings</h1>
+
+
+<div class="timing">
+  <table>
+    <th>Time</th>
+    <tr><td>08:00</td></tr>
+    <tr><td>09:00</td></tr>
+    <tr><td>10:00</td></tr>
+    <tr><td>11:00</td></tr>
+    <tr><td>12:00</td></tr>
+    <tr><td>13:00</td></tr>
+    <tr><td>14:00</td></tr>
+    <tr><td>15:00</td></tr>
+    <tr><td>16:00</td></tr>
+    <tr><td>17:00</td></tr>
+    <tr><td>18:00</td></tr>
+    <tr><td>19:00</td></tr>
+
+
+  </table>
+</div>
+<div>
+<table>
+  <thead>
+    <tr>
+    <% @rooms.each do |room| %>
+      <th><%=room.room_name%></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+        <% if booking.id % 7 == 0%>
+          <% if booking.note %>
+            <tr></tr>
+          <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+          <% else %>
+              <tr></tr>
+              <td><%= link_to booking.starttime, booking_path(booking) %></td>
+          <% end %>
+        <%else%>
+          <% if booking.note %>
+            <td class= <%= booking.room.room_name %>><%= link_to booking.inspect, edit_booking_path(booking) %></td>
+            <% else %>
+              <td><%= link_to 'book', booking_path(booking) %><%= booking.user_id %></td>
+          <% end %>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="waiting">
+  <table>
+    <th class="list_size">Waitinglist</th>
+    <% @bookings.each do |booking| %>
+    <%if booking.status == "PENDING"%>
+      <tr><td class="list_size"><%=booking.id%></td></tr>
+      <%end%>
+    <%end%>
+  </table>
+
+</div>
+<br>
+
+
+  <br>
+</div>

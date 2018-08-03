@@ -1,0 +1,44 @@
+// neccessary files peter and sithanga
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+// end
+
+
+.timing{
+  float:left;
+  text-align: center;
+}
+
+
+/* Navbar section */
+.navbar-default {
+  background: #fff;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-brand{
+  font-size:20px;
+  color:#000;
+  font-weight:bold;
+}
+h1 {
+  padding-top: 15px;
+}
+
+.call {
+width: 300px;
+height: 20px;
+position: relative;
+left:-760px;
+top: 90px;
+}
