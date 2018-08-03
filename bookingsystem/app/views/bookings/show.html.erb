@@ -37,7 +37,12 @@
 
   <p>
     <strong>End Time:</strong>
+    <% if @booking.starttime == @booking.endtime %>
+    <% @booking.endtime = @bookings.endtime + 1 %>
     <%= @booking.endtime %>
+    <% else %>
+    <%= @booking.endtime %>
+    <% end %>
   </p>
 
   <p>

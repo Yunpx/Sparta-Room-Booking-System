@@ -158,27 +158,35 @@ a:hover {
 .form_box {
   position: relative;
   border: 1px solid black;
-  width: 350px;
-  left: 375px;
+  width: 573px;
+  left: 265px;
   background-color: white;
   text-align: left;
-  top: 35px;
-  padding: 15px;
+  top: 16px;
+  padding: 83px;
   border-radius: 2%;
   line-height: 26px;
+  height: 488px;
+  float: center;
+  bottom: 27px;
+  padding-top: 48px;
 }
 
 .show_box {
   position: relative;
   border: 1px solid black;
-  width: 350px;
-  height: 400px;
-  left: 375px;
+  width: 573px;
+  left: 265px;
   background-color: white;
   text-align: left;
-  top: 35px;
-  padding: 45px;
+  top: 16px;
+  padding: 83px;
   border-radius: 2%;
+  line-height: 26px;
+  height: 488px;
+  float: center;
+  bottom: 27px;
+  padding-top: 48px;
 }
 
 .back_button {
