@@ -22,7 +22,7 @@
       <% end %>
 
     <% @beginning_of_month = Date.current.beginning_of_month %>
-    <% @end_of_month = Date.current.end_of_month + 1.months %>
+    <% @end_of_month = Date.current.end_of_month %>
 
   <% (@beginning_of_month..@end_of_month).each do |d| %>
       <% if d == @beginning_of_month %>
