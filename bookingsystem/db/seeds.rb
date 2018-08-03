@@ -48,10 +48,9 @@ user.save!
 
 
 
-for day in 1..5
+for day in 1..30
 
   Day.create([{
-
     }])
 
 
@@ -685,9 +684,5 @@ Booking.create([
     day_id: day
   }
   ])
-
-
-
-
 
 end
