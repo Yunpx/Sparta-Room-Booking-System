@@ -73,8 +73,9 @@
       <%= form.label :Status %>
       <%= form.select(:status, options_for_select([['AVAILABLE', 'AVAILABLE'], ['PENDING', 'PENDING'],
         ['BOOKED', 'BOOKED']]), {:prompt => "Select status"} )%></div>
-    <div class="actions day_label">
       <%end%>
+      <div class="actions day_label">
+
       <%= form.submit "Book Room" %>
 
     </div>
