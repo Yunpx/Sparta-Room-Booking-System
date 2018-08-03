@@ -123,14 +123,15 @@
   <br>
 </div>
 
-<div class="waiting">
-  <table>
-    <th class="waiting_heading list_size">Waiting List</th>
-    <% @bookings.each do |booking| %>
-    <%if booking.status == "PENDING"%>
-      <tr><td class="waiting_heading"><%=booking.id%></td></tr>
+<%if user_signed_in? && current_user.id ==2%>
+  <div class="waiting">
+    <table>
+      <th class="waiting_heading list_size">Waiting List</th>
+      <% @bookings.each do |booking| %>
+      <%if booking.status == "PENDING"%>
+        <tr><td class="waiting_heading"><%= link_to booking.id, edit_booking_path(booking)%></td></tr>
+        <%end%>
       <%end%>
-    <%end%>
-  </table>
-
+    </table>
+<%end%>
 </div>
