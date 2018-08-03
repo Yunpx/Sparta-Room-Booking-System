@@ -47,7 +47,7 @@ user.save!
 
 day = 1
 
-for x in (Date.current.beginning_of_month)..(Date.current.end_of_month)
+for x in (Date.current.beginning_of_month)..(Date.current.end_of_month + 1.months)
 
   Day.create([{
     }])
