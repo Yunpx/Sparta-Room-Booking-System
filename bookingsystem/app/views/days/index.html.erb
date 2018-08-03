@@ -2,13 +2,13 @@
 <%= stylesheet_link_tag "bookings" %>
 <%= stylesheet_link_tag "application" %>
 
-<h1>Month</h1>
+<h1>August</h1>
   <table id='calendar'>
    <tr>
-     <th>Sunday</th><th>Monday</th>
-     <th>Tuesday</th><th>Wednesday</th>
-     <th>Thursday</th><th>Friday</th>
-     <th>Saturday</th>
+     <th class="day_label">Sunday</th><th class="day_label">Monday</th>
+     <th class="day_label">Tuesday</th><th class="day_label">Wednesday</th>
+     <th class="day_label">Thursday</th><th class="day_label">Friday</th>
+     <th class="day_label">Saturday</th>
     </tr>
     <tr>
       <% i = 0 %>
@@ -31,7 +31,7 @@
 
 
   <% if d.wday == 0 %> </tr><tr> <% end %>
-    <td> <%= link_to d.day, day_store[u] %> </td>
+    <td class="day"> <%= link_to d.day, day_store[u], class: "day_main" %> </td>
     <% u += 1 %>
   <% end %>
 
