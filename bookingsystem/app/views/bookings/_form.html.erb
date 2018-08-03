@@ -17,18 +17,18 @@
         <%= form.label :Name, class:"namefield" %>
         <!-- Default value of textbox is User 1 if not logged in -->
         <!-- Otherwise if logged in the textbox will display only the user logged in -->
-        <%= form.text_field :name, placeholder: "Please Enter A Name..." %>
+        <%= form.text_field :name, placeholder: "Please Enter A Name...", class: 'userinput' %>
       </div>
 
       <div class="field">
 
         <%= form.label :Email, class:"namefield"%>
-        <%= form.text_field :email, placeholder: "example@spartaglobal.com?" %>
+        <%= form.text_field :email, placeholder: "example@spartaglobal.com?", class: 'userinput'  %>
       </div>
 
       <div class="field">
         <%= form.label :Room_name, class:'roomfield' %>
-        <%= collection_select(:booking, :room_id, Room.all, :id, :room_name) %>
+        <%= collection_select(:booking, :room_id, Room.all, :id, :room_name, class: 'userinput') %>
       </div>
 
         <div class="field">
@@ -69,7 +69,7 @@
       <%= form.text_area :note, placeholder: "Additional Notes About The Meeting..." %>
     </div>
     <div class="actions day_label">
-      <%= form.submit "Book Room" %>
+      <%= form.submit "Book Room", class:'submitbutton' %>
 
     </div>
   </div>

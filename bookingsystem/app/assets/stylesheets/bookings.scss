@@ -160,7 +160,7 @@ a:hover {
   border: 1px solid black;
   width: 350px;
   left: 375px;
-  background-color: white;
+  background-color: #fcfcfc;
   text-align: left;
   top: 35px;
   padding: 15px;
@@ -174,7 +174,7 @@ a:hover {
   width: 350px;
   height: 400px;
   left: 375px;
-  background-color: white;
+  background-color: #fcfcfc;
   text-align: left;
   top: 35px;
   padding: 45px;
@@ -211,18 +211,46 @@ a:hover {
 
 #booking_category {
   width: 57%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
 }
 
 #booking_date_2i {
     width: 23%;
+    border: 1px solid #e5e5e5;
+    background: linear-gradient(to top,white, #f0f0f0);
 }
 
 #booking_importance {
   width: 57%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
 }
 
 #booking_note {
   width: 100%;
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
+}
+
+#booking_room_id {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
+}
+
+#booking_participants{
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
+}
+
+#booking_starttime {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
+}
+
+#booking_endtime {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
 }
 .namefield {
   padding-right: 83px;
@@ -294,4 +322,13 @@ top: 105px;
 
 .list_size {
   width: 250px;
+}
+
+.userinput {
+  border: 1px solid #e5e5e5;
+  background: linear-gradient(to top,white, #f0f0f0);
+}
+
+.submitbutton {
+  border-radius: 6%
 }
