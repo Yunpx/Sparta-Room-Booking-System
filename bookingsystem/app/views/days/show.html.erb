@@ -98,39 +98,44 @@
     <tbody>
       <% @bookings.each do |booking| %>
       <% if booking.id % 7 == 0%>
-        <% if booking.note %>
+        <% if booking.status =="BOOKED" || booking.status =="PENDING"  %>
         <tr></tr>
-
-        <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
-
+          <%if user_signed_in? && current_user.id ==2%>
+          <td class= <%= booking.room.room_name %>><%= link_to booking.status, edit_booking_path(booking) %></td>
+          <%else%>
+            <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+          <%end%>
         <% else %>
         <tr></tr>
-
             <td class="booking_field"><%=link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
-
         <% end %>
       <%else%>
-        <% if booking.note %>
-          <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
-          <% else %>
+        <% if booking.status =="BOOKED"  || booking.status =="PENDING"%>
+          <%if user_signed_in? && current_user.id ==2%>
+            <td class= <%= booking.room.room_name %>><%= link_to booking.status, edit_booking_path(booking) %></td>
+          <%else%>
+            <td class= <%= booking.room.room_name %>><%= link_to booking.status, booking_path(booking) %></td>
+          <%end%>
+        <% else %>
             <td class="booking_field"><%= link_to booking.status, edit_booking_path(booking), :class => "booking_field" %></td>
         <% end %>
       <%end%>
-      <% end %>
+    <% end  %>
     </tbody>
   </table>
 
   <br>
 </div>
 
-<div class="waiting">
-  <table>
-    <th class="waiting_heading list_size">Waiting List</th>
-    <% @bookings.each do |booking| %>
-    <%if booking.status == "PENDING"%>
-      <tr><td class="waiting_heading"><%=booking.id%></td></tr>
+<%if user_signed_in? && current_user.id ==2%>
+  <div class="waiting">
+    <table>
+      <th class="waiting_heading list_size">Waiting List</th>
+      <% @bookings.each do |booking| %>
+      <%if booking.status == "PENDING"%>
+        <tr><td class="waiting_heading"><%=booking.room.room_name%> |<%= link_to booking.name, edit_booking_path(booking)%></td></tr>
+        <%end%>
       <%end%>
-    <%end%>
-  </table>
-
+    </table>
+<%end%>
 </div>

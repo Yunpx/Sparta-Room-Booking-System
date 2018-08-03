@@ -2,9 +2,6 @@
 
 <%= render 'form', booking: @booking %>
 
-<% if @booking.starttime.eql? @booking.endtime %>
-<% @booking.endtime + 1%>
-<% else %>
-<% end %>
+
 
 <%= link_to 'Back', day_path(@booking.day_id), :class => "back_button" %>
