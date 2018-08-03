@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_084228) do
+ActiveRecord::Schema.define(version: 2018_08_03_090323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,25 @@ ActiveRecord::Schema.define(version: 2018_08_02_084228) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  end
+
+  create_table "waiting_lists", force: :cascade do |t|
+    t.integer "booking_id"
+    t.integer "room_id"
+    t.date "date"
+    t.string "name"
+    t.string "importance"
+    t.integer "participants"
+    t.integer "user_id"
+    t.string "status"
+    t.string "email"
+    t.integer "day_id"
+    t.integer "starttime"
+    t.integer "endtime"
+    t.text "note"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all.order("id ASC")
     @rooms = Room.all.order("id ")
-
   end
 
   # GET /bookings/1
@@ -51,9 +50,13 @@ class BookingsController < ApplicationController
   # end
 
   def update
+    if @booking.starttime == @booking.endtime
+      @booking.endtime + 1
+    end
     if user_signed_in?
       @booking.status = "BOOKED"
       @booking.user_id = current_user.id
+
     else
       @booking.status = "PENDING"
       @booking.user_id = 1
@@ -93,7 +96,7 @@ class BookingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
 
-      params.require(:booking).permit(:user_id, :name, :room_id, :participants, :email, :date, :starttime, :endtime, :importance, :category,:note, :status)
+      params.require(:booking).permit(:user_id, :name, :room_id, :participants, :email, :date, :starttime, :endtime, :importance, :category,:note, :status )
 
     end
 end

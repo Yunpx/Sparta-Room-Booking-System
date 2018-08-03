@@ -162,27 +162,35 @@ a:hover {
 .form_box {
   position: relative;
   border: 1px solid black;
-  width: 350px;
-  left: 375px;
-  background-color: #fcfcfc;
+  width: 573px;
+  left: 265px;
+  background-color: white;
   text-align: left;
-  top: 35px;
-  padding: 15px;
+  top: -30px;
+  padding: 83px;
   border-radius: 2%;
   line-height: 26px;
+  height: 635px;
+  float: left;
+  bottom: 27px;
+  padding-top: 48px;
 }
 
 .show_box {
   position: relative;
   border: 1px solid black;
-  width: 350px;
-  height: 400px;
-  left: 375px;
-  background-color: #fcfcfc;
+  width: 573px;
+  left: 265px;
+  background-color: white;
   text-align: left;
-  top: 35px;
-  padding: 45px;
+  top: -30px;
+  padding: 83px;
   border-radius: 2%;
+  line-height: 26px;
+  height: 635px;
+  float: left;
+  bottom: 27px;
+  padding-top: 48px;
 }
 
 .back_button {

@@ -68,8 +68,18 @@
       <%= form.label :Additional_Notes %>
       <%= form.text_area :note, placeholder: "Additional Notes About The Meeting..." %>
     </div>
-    <div class="actions day_label">
-      <%= form.submit "Book Room", class: "userinput" %>
+
+    <% if user_signed_in? && current_user.id ==2%>
+    <div class="field">
+      <%= form.label :Status %>
+      <%= form.select(:status, options_for_select([['AVAILABLE', 'AVAILABLE'], ['PENDING', 'PENDING'],
+        ['BOOKED', 'BOOKED']]), {:prompt => "Select status"} )%></div>
+      <%end%>
+      <div class="actions day_label">
+
+        <%= form.submit "Book Room", class: "userinput" %>
+
+
 
     </div>
   </div>
