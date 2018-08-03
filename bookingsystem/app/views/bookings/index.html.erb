@@ -54,19 +54,18 @@
   </tbody>
 </table>
 </div>
-<div class="waiting">
-  <table>
-    <th class="list_size">Waitinglist</th>
-    <% @bookings.each do |booking| %>
-    <%if booking.status == "PENDING"%>
-      <tr><td class="list_size"><%=booking.id%></td></tr>
+
+<% if user_signed_in? && current_user.id ==2%>
+  <div class="waiting">
+    <table>
+      <th class="list_size">Waitinglist</th>
+      <% @bookings.each do |booking| %>
+      <%if booking.status == "PENDING"%>
+        <tr><td class="list_size"><%=booking.name%></td></tr>
+        <%end%>
       <%end%>
-    <%end%>
-  </table>
-
-</div>
-<br>
-
-
+    </table>
+  </div>
+<%end%>
   <br>
 </div>

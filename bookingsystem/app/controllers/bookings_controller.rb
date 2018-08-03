@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all.order("id ASC")
     @rooms = Room.all.order("id ")
-
   end
 
   # GET /bookings/1
