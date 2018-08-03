@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_id: 1
+  room_id: 1
+  date: 2018-08-03
+  name: MyString
+  importance: MyString
+  participants: 1
+  user_id: 1
+  status: MyString
+  email: MyString
+  day_id: 1
+  starttime: 1
+  endtime: 1
+  note: MyText
+  category: MyString
+
+two:
+  booking_id: 1
+  room_id: 1
+  date: 2018-08-03
+  name: MyString
+  importance: MyString
+  participants: 1
+  user_id: 1
+  status: MyString
+  email: MyString
+  day_id: 1
+  starttime: 1
+  endtime: 1
+  note: MyText
+  category: MyString
